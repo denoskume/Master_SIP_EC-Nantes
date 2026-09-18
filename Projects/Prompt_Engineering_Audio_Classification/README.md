@@ -331,12 +331,12 @@ The experiment highlights several observations:
 * Prompt engineering
 * Cosine similarity
 
+
 ## Participants
 
-**Denos Kume** 
+**Denos Kume**<br>
+**Venkatesh Muthukrishnan**<br><br>
 
-**Venkatesh Muthukrishnan**
-
-**Supervisor:** Modan Tailleur
-**Program:** M1 DASSIP — École Centrale de Nantes
+**Supervisor:** Modan Tailleur<br>
+**Program:** M1 DASSIP — École Centrale de Nantes<br>
 **Academic Year:** 2025–2026
