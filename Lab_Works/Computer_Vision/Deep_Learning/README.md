@@ -1,4 +1,3 @@
-````markdown
 # Deep Learning for MNIST Classification
 
 Handwritten-digit classification using a one-hidden-layer multilayer perceptron (MLP) implemented in PyTorch.
@@ -316,6 +315,3 @@ The laboratory therefore focuses on the fundamental components of neural-network
 
 Master SIP
 École Centrale de Nantes
-
-```
-```
