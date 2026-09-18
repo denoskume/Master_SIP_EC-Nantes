@@ -333,7 +333,8 @@ The experiment highlights several observations:
 
 ## Participants
 
-**Denos Kume**
+**Denos Kume** 
+
 **Venkatesh Muthukrishnan**
 
 **Supervisor:** Modan Tailleur
