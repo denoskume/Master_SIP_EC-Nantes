@@ -1,0 +1,21 @@
+Class,Accuracy (%),Group
+Insects,12.5,Lowest-performing
+Footsteps,57.5,Lowest-performing
+Wind,57.5,Lowest-performing
+Washing Machine,70.0,Lowest-performing
+Rooster,72.5,Lowest-performing
+Airplane,80.0,Lowest-performing
+Helicopter,80.0,Lowest-performing
+Crickets,80.0,Lowest-performing
+Rain,80.0,Lowest-performing
+Engine,82.5,Lowest-performing
+Cow,100.0,Highest-performing
+Crow,100.0,Highest-performing
+Crying Baby,100.0,Highest-performing
+Dog,100.0,Highest-performing
+Laughing,100.0,Highest-performing
+Keyboard Typing,100.0,Highest-performing
+Door Wood Knock,100.0,Highest-performing
+Fireworks,100.0,Highest-performing
+Brushing Teeth,100.0,Highest-performing
+Glass Breaking,100.0,Highest-performing
