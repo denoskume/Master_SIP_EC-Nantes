@@ -1,13 +1,3 @@
-"""                                   ╔═══════════════════════════════════════════════════════╗
-                                        ║   Rouge Gagne, Noir Perd – 2025/2026                                                  ║    
-                                        ║   Author: Denos KUME                                                                                 ║
-                                        ║   Collaborator: Sena FUKABE                                                                     ║
-                                        ║   Program: M1 CORO DASSIP                                                                     ║
-                                        ║   Instructor: Mira Rizkallah                                                                        ║
-                                        ║   Motto: "Code with purpose, build with clarity."                                ║
-                                        ╚═══════════════════════════════════════════════════════╝                 
-game.py"""
-
 import pygame
 import random
 import time
@@ -668,9 +658,3 @@ class CardGame:
         elif self.state == STATE_GAME_OVER:
             db.draw_game_over(self)
 
-"""
-                                           ════════════════════════════════════════════════════════
-                                               End of file — © Denos KUME, M1 CORO DASSIP (2025–2026)
-                                               Collaborator: Sena FUKABE | Instructor: Mira Rizkallah
-                                           ════════════════════════════════════════════════════════
-"""
