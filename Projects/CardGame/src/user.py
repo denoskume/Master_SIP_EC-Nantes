@@ -1,7 +1,14 @@
+"""Player domain model.
+
+The User class owns identity and balance state only; UI and game-state
+logic remain in the controller and dashboard modules.
+"""
+
 class User:
-    """Store player identity and balance state."""
+    """Store player identity and balance state for the current session."""
 
     def __init__(self, nickname: str = "", avatar_index: int = 0, initial_balance: int = 30):
+        """Create a player with a selected avatar and starting balance."""
         self.nickname = nickname
         self.avatar_index = avatar_index
 
