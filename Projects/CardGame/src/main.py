@@ -1,3 +1,9 @@
+"""Application entry point for Rouge Gagne, Noir Perd.
+
+This module configures platform-specific audio, initializes Pygame,
+creates the domain objects, and runs the event/update/render loop.
+"""
+
 import os
 from pathlib import Path
 
@@ -43,16 +49,16 @@ def main():
     screen = pygame.display.set_mode((960, 630))
     clock = pygame.time.Clock()
 
-    # Create domain objects
+    # Domain objects hold player and betting state independently of rendering.
     player = us.User(nickname="", avatar_index=0, initial_balance=30)
     betting = bt.Bet(min_amount=10, max_amount=100, amount=10, turbo=1)
 
-    # Create game instance
+    # CardGame coordinates state transitions, timers, gameplay, and persistence.
     card_game = gm.CardGame(screen, player, betting)
 
     running = True
     while running:
-        # Events
+        # Process input first, then update the active state and render one frame.
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 running = False
