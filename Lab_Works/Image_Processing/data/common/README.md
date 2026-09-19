@@ -1,5 +1,19 @@
 # Common Image Data
 
-These images were recovered from the original course data archive supplied by the project owner.
-Their original external provenance and redistribution license are not documented in the recovered archive.
-They are kept here only as inputs for the educational notebooks in this repository.
+Shared input images used by the Image Processing laboratories.
+
+The files in this directory are intentionally kept in one common location so multiple notebooks can reuse the same inputs without duplication.
+
+## Usage
+
+Notebooks access these images through relative paths. Keep the filenames unchanged unless all dependent notebooks are updated accordingly.
+
+Current common inputs include:
+
+- `ballons.jpg`
+- `einstein.png`
+- `Elizabeth_Tower_London.jpg`
+- `grass.jpg`
+- `peppers.png`
+
+Additional topic-specific data can be stored in dedicated subdirectories under `data/` for filtering, Fourier analysis, segmentation, and other experiments.
