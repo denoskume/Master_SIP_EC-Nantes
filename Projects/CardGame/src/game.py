@@ -33,6 +33,7 @@ class Card:
 
     def __init__(self, rect, is_red: bool, img_front=None, 
         img_back_red=None, img_back_black=None):
+        """Create a card with logical color identity and optional image assets."""
         self.rect = rect                            
         self.is_red = is_red                 
         self.face = "BACK"                  
@@ -71,6 +72,7 @@ class CardGame:
     """Coordinate the complete game lifecycle through explicit runtime states."""
 
     def __init__(self, screen, user: us.User, bet: bt.Bet):
+        """Initialize UI geometry, assets, audio, timers, history, and state."""
         self.screen = screen
         self.w, self.h = screen.get_size()
 
@@ -460,6 +462,7 @@ class CardGame:
 
     # ---------- RESOLVE ROUND ----------
     def resolve_round(self, index):
+        """Resolve win/loss, update balance, persist the round, and choose the next state."""
         for c in self.cards:
             c.face = "BACK"
 
