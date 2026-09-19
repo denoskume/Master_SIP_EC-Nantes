@@ -1,14 +1,22 @@
+"""Rendering functions for every CardGame screen.
+
+This module contains presentation logic only. It reads game state and draws
+controls, timers, cards, summaries, and overlays without owning round rules.
+"""
+
 import pygame
 
 # ---------- Small helpers ----------
 
 def _draw_center_text(game, text, y, font, color):
+    """Render a text label centered horizontally at the requested y-position."""
     surf = font.render(text, True, color)
     rect = surf.get_rect(center=(game.w // 2, y))
     game.screen.blit(surf, rect)
 
 
 def _draw_button(game, rect, text, bg_color, text_color):
+    """Draw a reusable rounded button with centered text."""
     pygame.draw.rect(game.screen, bg_color, rect, border_radius=10)
     pygame.draw.rect(game.screen, (0, 0, 0), rect, 2, border_radius=10)
     label = game.font_norm.render(text, True, text_color)
@@ -16,6 +24,7 @@ def _draw_button(game, rect, text, bg_color, text_color):
 
 
 def _draw_circle_timer(game, center, total_ms, elapsed_ms):
+    """Render the remaining phase time inside a circular timer."""
     x, y = center
     radius = 40
 
@@ -32,6 +41,7 @@ def _draw_circle_timer(game, center, total_ms, elapsed_ms):
 
 
 def draw_pause_overlay(game):
+    """Draw a translucent pause overlay above the current screen."""
     overlay = pygame.Surface((game.w, game.h), pygame.SRCALPHA)
     overlay.fill((0, 0, 0, 150))
     game.screen.blit(overlay, (0, 0))
@@ -42,6 +52,7 @@ def draw_pause_overlay(game):
 
 
 def _draw_logo_cards(game):
+    """Draw the decorative card logo when both assets are available."""
     if game.logo_back is None or game.logo_front is None:
         return
     x, y = 110, 145
@@ -50,6 +61,7 @@ def _draw_logo_cards(game):
 
 
 def _draw_player_info(game):
+    """Draw the current player avatar and nickname in the screen header."""
     if game.user.nickname.strip() == "":
         return
 
@@ -73,6 +85,7 @@ def _draw_player_info(game):
 # ---------- START SCREEN ----------
 
 def draw_start_screen(game):
+    """Render the splash screen and the five most recent persisted rounds."""
     game.screen.fill(game.DARK)
     _draw_logo_cards(game)
 
@@ -145,6 +158,7 @@ def draw_start_screen(game):
 # ---------- MENU (nickname + avatar) ----------
 
 def draw_menu(game):
+    """Render nickname input, avatar selection, and validation feedback."""
     game.screen.fill(game.DARK)
     _draw_logo_cards(game)   # small side logo on the left (keep as before)
 
@@ -241,6 +255,7 @@ def draw_menu(game):
 # ---------- BET SCREEN ----------
 
 def draw_bet_screen(game):
+    """Render balance, turbo selection, bet controls, and start availability."""
     game.screen.fill(game.DARK)
 
     panel_w, panel_h = 800, 500
@@ -308,6 +323,7 @@ def draw_bet_screen(game):
         value_r = value_s.get_rect(center=(x_center, table_rect.y + 55))
         game.screen.blit(value_s, value_r)
 
+    # Keep the selected multiplier affordable whenever the base bet changes.
     affordable_mults = [m for m in (1, 2, 3) if game.bet.amount * m <= game.user.balance]
     if not affordable_mults:
         max_affordable = 1
@@ -431,6 +447,7 @@ def draw_bet_screen(game):
 # ---------- SHARED STEPS (SHOW_BACKS / SHUFFLE / CHOOSE) ----------
 
 def draw_show_backs(game):
+    """Render the observation phase with card identities visible."""
     game.screen.fill(game.DARK)
     _draw_player_info(game)
 
@@ -456,6 +473,7 @@ def draw_show_backs(game):
 
 
 def draw_shuffle(game):
+    """Render the shuffle phase while all cards share the same visible face."""
     game.screen.fill(game.DARK)
     _draw_player_info(game)
 
@@ -484,6 +502,7 @@ def draw_shuffle(game):
 
 
 def draw_choose(game):
+    """Render the timed selection phase and highlight a chosen card."""
     game.screen.fill(game.DARK)
     _draw_player_info(game)
 
@@ -518,6 +537,7 @@ def draw_choose(game):
 # ---------- RESULT SCREEN ----------
 
 def draw_result(game):
+    """Render outcome, stake impact, balance, cards, and navigation actions."""
     game.screen.fill(game.DARK)
     _draw_player_info(game)
 
@@ -595,6 +615,7 @@ def draw_result(game):
 # ---------- GAME OVER DASHBOARD ----------
 
 def draw_game_over(game):
+    """Render the end-of-session summary and recent round breakdown."""
     game.screen.fill(game.DARK)
     _draw_player_info(game)
 
