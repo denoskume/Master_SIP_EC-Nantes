@@ -1,13 +1,3 @@
-"""                                   ╔═══════════════════════════════════════════════════════╗
-                                        ║   Rouge Gagne, Noir Perd – 2025/2026                                                  ║    
-                                        ║   Author: Denos KUME                                                                                 ║
-                                        ║   Collaborator: Sena FUKABE                                                                     ║
-                                        ║   Program: M1 CORO DASSIP                                                                     ║
-                                        ║   Instructor: Mira Rizkallah                                                                        ║
-                                        ║   Motto: "Code with purpose, build with clarity."                                ║
-                                        ╚═══════════════════════════════════════════════════════╝                 
-dashboard.py"""
-
 import pygame
 
 # ---------- Small helpers ----------
@@ -696,9 +686,3 @@ def draw_game_over(game):
     _draw_button(game, game.btn_exit, "Quit", game.RED, game.WHITE)
 
 
-"""
-                                           ════════════════════════════════════════════════════════
-                                               End of file — © Denos KUME, M1 CORO DASSIP (2025–2026)
-                                               Collaborator: Sena FUKABE | Instructor: Mira Rizkallah
-                                           ════════════════════════════════════════════════════════
-"""
