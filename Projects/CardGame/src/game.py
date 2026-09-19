@@ -1,3 +1,10 @@
+"""Core game logic and finite-state controller.
+
+CardGame owns the round lifecycle, timers, card animation, input dispatch,
+result resolution, pause/resume behavior, optional audio, and JSON history.
+Rendering is delegated to dashboard.py.
+"""
+
 import pygame
 import random
 import time
@@ -22,6 +29,8 @@ STATE_PAUSE = "PAUSE"
 
 # ===================== CARD CLASS =====================
 class Card:
+    """Represent one logical card while its rectangle moves during shuffling."""
+
     def __init__(self, rect, is_red: bool, img_front=None, 
         img_back_red=None, img_back_black=None):
         self.rect = rect                            
@@ -34,6 +43,7 @@ class Card:
         self.img_back_black = img_back_black
 
     def draw(self, screen, fonts):
+        """Draw the card asset or a fallback rectangle when images are unavailable."""
         # If images are available, use them
         if self.img_front is not None and self.img_back_red is not None and self.img_back_black is not None:
             if self.face == "BACK":
@@ -58,6 +68,8 @@ class Card:
 
 # ===================== CARD GAME CLASS =====================
 class CardGame:
+    """Coordinate the complete game lifecycle through explicit runtime states."""
+
     def __init__(self, screen, user: us.User, bet: bt.Bet):
         self.screen = screen
         self.w, self.h = screen.get_size()
@@ -230,6 +242,7 @@ class CardGame:
 
     # ---------- JSON HISTORY ----------
     def _load_history(self):
+        """Load persisted rounds, returning an empty list if history is unavailable."""
         try:
             if os.path.exists(self.history_file):
                 with open(self.history_file, "r", encoding="utf-8") as f:
@@ -241,6 +254,7 @@ class CardGame:
         return []
 
     def _save_history(self):
+        """Persist the bounded global round history as readable JSON."""
         try:
             with open(self.history_file, "w", encoding="utf-8") as f:
                 json.dump(self.global_history, f, ensure_ascii=False, indent=2)
@@ -249,10 +263,12 @@ class CardGame:
 
     # ---------- EVENT HANDLERS FOR MENU ----------
     def handle_start_event(self, event):
+        """Leave the splash screen after any keyboard or mouse input."""
         if event.type in (pygame.MOUSEBUTTONDOWN, pygame.KEYDOWN):
             self.state = STATE_MENU
 
     def handle_menu_event(self, event):
+        """Handle nickname editing, avatar selection, and profile validation."""
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             input_width = 300
             input_rect = pygame.Rect(self.w // 2 - input_width // 2, 155, input_width, 40)
@@ -284,6 +300,7 @@ class CardGame:
 
     # ---------- BET SCREEN EVENTS ----------
     def handle_bet_event(self, event):
+        """Handle turbo selection, bet adjustment, and round start requests."""
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             pos = event.pos
 
@@ -307,17 +324,19 @@ class CardGame:
 
     # ---------- START A ROUND ----------
     def start_round(self):
-        total_width = 3 * self.card_width + 2 * self.card_gap   # Calculate total width of all 3 cards plus the gaps between them
-        start_x = (self.w - total_width) // 2                                  # Center the cards horizontally on the screen
-                                                                                                            #// --> start_x to be an integer pixel coordinate
+        """Create three cards, choose the red card, and start observation."""
+        # Compute three evenly spaced card slots centered in the game window.
+        total_width = 3 * self.card_width + 2 * self.card_gap
+        start_x = (self.w - total_width) // 2
 
-        cards_positions = []                                                                # Prepare a list to store the positions of each card
+        cards_positions = []
         for idx in range(3):
-            x = start_x + idx * (self.card_width + self.card_gap)  # Compute x-position for each card based on index and spacing
-            rect = pygame.Rect(x, self.card_area_y, self.card_width, self.card_height)   # Create a rectangle for the card at the computed position
-            cards_positions.append(rect)   # Store the rectangle in the list
+            x = start_x + idx * (self.card_width + self.card_gap)
+            rect = pygame.Rect(x, self.card_area_y, self.card_width, self.card_height)
+            cards_positions.append(rect)
 
-        red_index = random.randint(0, 2)  # Randomly select one of the three cards to be the red card
+        # Card identity stays attached to the object while positions are shuffled.
+        red_index = random.randint(0, 2)
 
         self.cards = []
         for idx in range(3):
@@ -345,6 +364,7 @@ class CardGame:
 
     # ---------- SHOW BACKS UPDATE ----------
     def update_show_backs(self):
+        """Advance to shuffling after the 10-second observation period."""
         elapsed = pygame.time.get_ticks() - self.state_start_time
         if elapsed >= 10_000:
             for c in self.cards:
@@ -357,6 +377,7 @@ class CardGame:
 
     # ---------- SHUFFLE UPDATE ----------
     def update_shuffle(self):
+        """Animate random pair swaps and transition to card selection."""
         now = pygame.time.get_ticks()
         elapsed = now - self.state_start_time
 
@@ -398,6 +419,7 @@ class CardGame:
             self.message = "Click on the red card! You have 10 seconds."
 
     def swap_two_cards(self):
+        """Start a non-blocking interpolation between two random card slots."""
         if self.is_swapping:
             return
 
@@ -418,11 +440,13 @@ class CardGame:
 
     # ---------- CHOOSE UPDATE / EVENTS ----------
     def update_choose(self):
+        """Resolve a timeout as a loss when no card is selected in time."""
         elapsed = pygame.time.get_ticks() - self.state_start_time
         if elapsed >= 10_000 and self.selected_card_index is None:
             self.resolve_round(None)
 
     def handle_choose_event(self, event):
+        """Resolve the round when the player clicks one of the cards."""
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if self.selected_card_index is not None:
                 return
@@ -530,6 +554,7 @@ class CardGame:
 
     # ---------- RESULT / GAME OVER EVENTS ----------
     def handle_result_event(self, event):
+        """Handle next-round, menu, and quit actions from the result screen."""
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
             if self.result_channel is not None and self.result_channel.get_busy():
                 self.result_channel.fadeout(150)
@@ -558,6 +583,7 @@ class CardGame:
 
     # ---------- RESET ----------
     def reset_game(self):
+        """Reset session-level player, bet, round, and timer state."""
         self.user.reset()
         self.bet.amount = max(self.bet.min, min(self.bet.max, 10))
         self.bet.turbo = 1
@@ -570,6 +596,7 @@ class CardGame:
 
     # ---------- GLOBAL EVENTS ----------
     def handle_event(self, event):
+        """Dispatch input to the handler associated with the active state."""
         # Pause toggle
         if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
             if self.state == STATE_PAUSE and self.state_before_pause is not None:
@@ -608,6 +635,7 @@ class CardGame:
 
     # ---------- UPDATE & DRAW ----------
     def update(self):
+        """Advance time-dependent logic for the active state."""
         if self.state == STATE_PAUSE:
             return
 
@@ -619,6 +647,7 @@ class CardGame:
             self.update_choose()
 
     def draw(self):
+        """Delegate rendering to dashboard.py for the active state."""
         if self.state == STATE_PAUSE and self.state_before_pause is not None:
             # Draw the underlying state
             if self.state_before_pause == STATE_START:
