@@ -1,27 +1,11 @@
-"""                                   ╔═══════════════════════════════════════════════════════╗
-                                        ║   Rouge Gagne, Noir Perd – 2025/2026                                                  ║    
-                                        ║   Author: Denos KUME                                                                                 ║
-                                        ║   Collaborator: Sena FUKABE                                                                     ║
-                                        ║   Program: M1 CORO DASSIP                                                                     ║
-                                        ║   Instructor: Mira Rizkallah                                                                        ║
-                                        ║   Motto: "Code with purpose, build with clarity."                                ║
-                                        ╚═══════════════════════════════════════════════════════╝                 
-bet.py"""
-
 class Bet:
-    """
-    Represents the betting configuration:
-    - min / max bet
-    - current bet amount
-    - turbo multiplier (X1, X2 or X3)
-    """
+    """Manage bet limits, current amount, and turbo multiplier."""
     def __init__(self, min_amount: int = 10, max_amount: int = 100, amount: int = 10, turbo: int = 1):
         self.min = min_amount
         self.max = max_amount
         self.amount = amount
         self.turbo = turbo  
 
-    # ----- Helpers -----
 
     def increase(self, step: int = 5, balance: int | None = None) -> None:
         """Increase bet by step, respecting max and optional balance."""
@@ -49,9 +33,3 @@ class Bet:
         """Check that bet is inside limits and affordable."""
         return self.min <= self.amount <= self.max and self.amount <= balance
 
-"""
-                                           ════════════════════════════════════════════════════════
-                                               End of file — © Denos KUME, M1 CORO DASSIP (2025–2026)
-                                               Collaborator: Sena FUKABE | Instructor: Mira Rizkallah
-                                           ════════════════════════════════════════════════════════
-"""
