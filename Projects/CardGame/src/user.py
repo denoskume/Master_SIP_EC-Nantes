@@ -1,20 +1,5 @@
-"""                                   ╔═══════════════════════════════════════════════════════╗
-                                        ║   Rouge Gagne, Noir Perd – 2025/2026                                                  ║    
-                                        ║   Author: Denos KUME                                                                                 ║
-                                        ║   Collaborator: Sena FUKABE                                                                     ║
-                                        ║   Program: M1 CORO DASSIP                                                                     ║
-                                        ║   Instructor: Mira Rizkallah                                                                        ║
-                                        ║   Motto: "Code with purpose, build with clarity."                                ║
-                                        ╚═══════════════════════════════════════════════════════╝                 
-user.py"""
-
 class User:
-    """
-    Represents a player profile:
-    - nickname
-    - avatar index
-    - balance (capital)
-    """
+    """Store player identity and balance state."""
 
     def __init__(self, nickname: str = "", avatar_index: int = 0, initial_balance: int = 30):
         self.nickname = nickname
@@ -42,18 +27,7 @@ class User:
         return stake
 
     def apply_win(self, stake: int) -> int:
-        """
-        Add NET PROFIT (stake) to balance.
-        - stake is the amount you risked
-        - profit = stake
-        So: new_balance = old_balance + stake
-        """
-        self.balance += stake      # <-- NOT 2 * stake
-        return stake               # return profit
+        """Add the net profit for a winning round and return it."""
+        self.balance += stake
+        return stake
 
-"""
-                                           ════════════════════════════════════════════════════════
-                                               End of file — © Denos KUME, M1 CORO DASSIP (2025–2026)
-                                               Collaborator: Sena FUKABE | Instructor: Mira Rizkallah
-                                           ════════════════════════════════════════════════════════
-"""
