@@ -1,21 +1,53 @@
 # Image Processing Fundamental
 
-Foundational image-processing laboratory reconstructed from the recovered course image data. The notebook is designed to be runnable from top to bottom and to explain how a digital image is represented and manipulated before introducing more advanced transformations and filters.
+Beginner-first laboratory for understanding digital images from first principles.
+
+The notebook is designed for readers with no previous image-processing background. It develops the numerical and visual foundations required before studying image transformations, spatial filtering, frequency-domain processing, and segmentation.
 
 ## Learning objectives
 
 By the end of the lab, you should be able to:
 
-- explain grayscale and RGB images as numerical arrays;
-- inspect image dimensions, channels, data types, and intensity ranges;
-- convert an RGB image to grayscale from first principles;
-- access and modify individual pixels safely;
-- extract a region of interest (ROI);
-- separate and visualize RGB channels;
-- compute basic image statistics and intensity histograms;
-- normalize image intensity values;
-- add controlled synthetic noise and quantify its effect;
-- save processed images and figures reproducibly.
+- explain how sampling and quantization produce a digital image;
+- describe binary, grayscale, and RGB images as NumPy arrays;
+- understand pixels, coordinates, image dimensions, aspect ratio, channels, data types, and bit depth;
+- distinguish pixel dimensions from physical resolution;
+- load, inspect, display, and save images reproducibly;
+- understand `(row, column)` indexing versus `(x, y)` coordinates;
+- convert RGB images to grayscale from first principles;
+- access and modify pixels safely;
+- extract regions of interest and understand pixel neighborhoods;
+- separate and interpret RGB channels;
+- compute image statistics and histograms;
+- understand dynamic range and min-max normalization;
+- work safely with `uint8` and floating-point arrays;
+- identify common image-noise models;
+- quantify image differences using MAE, MSE, RMSE, and PSNR;
+- recognize common implementation mistakes before moving to advanced processing.
+
+## Notebook philosophy
+
+The notebook follows a consistent learning pattern:
+
+```text
+Concept
+  ↓
+Mathematical intuition
+  ↓
+Array representation
+  ↓
+Commented Python implementation
+  ↓
+Visualization
+  ↓
+Interpretation
+  ↓
+Common mistakes
+  ↓
+Exercise / self-check
+```
+
+The goal is not to memorize library calls. The goal is to understand what the numbers mean and why each operation changes the image.
 
 ## Structure
 
@@ -53,6 +85,6 @@ jupyter notebook notebooks/Image_Processing_Fundamental.ipynb
 
 The notebook uses relative paths only. Generated figures are written to `outputs/figures/`.
 
-## Notes
+## Next lab
 
-The original lab handout was not recovered. This notebook therefore reconstructs the fundamental learning sequence from the recovered course images and standard digital-image-processing concepts. It does not claim to reproduce the original exercise sheet verbatim.
+After completing the fundamentals, continue with **Image_Transformation**, where these array concepts are used to modify image intensities and spatial coordinates.
