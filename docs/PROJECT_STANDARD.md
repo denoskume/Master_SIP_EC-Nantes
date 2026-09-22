@@ -81,22 +81,19 @@ Mandatory structural order:
 
 1. Camera-style branded header
 2. `## Theoretical Foundations`
-3. `### Big Picture`
+3. `### Technical Context`
 4. `### Core <Domain> Model`
-5. `### Canonical Notation Used Everywhere`
-6. `### Expected Learning Outcomes`
+5. `### Notation and Conventions`
+6. `### Analytical Scope`
 7. the same `## 1. ...` through `## N. ...` tasks
-8. `## Expected Competencies`
-   - `### Level 1 — Beginner`
-   - `### Level 2 — Operational`
-   - `### Level 3 — Advanced`
-   - `### Level 4 — Advanced Understanding`
-   - `### Complete Dependency Chain`
+8. `## Technical Synthesis`
 9. `## Scope and Limitations`
    - `### Included`
    - `### Not included`
 
-Purpose: explain the mathematics, intuition, assumptions, failure modes, and interpretation required by the task sequence.
+Purpose: document the mathematical model, derivations, assumptions, numerical conditioning, method-specific failure modes, and the direct link between theory and implementation.
+
+The Theory notebook is **not a teaching progression**. It must not contain "Concept Check", beginner/intermediate/advanced levels, learning-outcome ladders, interview questions, exam-preparation material, or tutorial exercises.
 
 ### Implementation
 
@@ -210,14 +207,23 @@ Mandatory principles:
 
 - professional English;
 - Camera-style branded notebook header;
-- consistent heading hierarchy;
-- consistent mathematical notation;
+- academic/engineering laboratory tone;
 - concise technical prose;
-- explicit assumptions and limitations;
+- equations used to justify implemented methods;
+- explicit assumptions, conditioning issues, failure modes, and limitations;
+- results presented as evidence, not as teaching examples;
+- discussion tied to observed figures and quantitative metrics;
 - no decorative clutter;
 - no unnecessary emojis;
+- no "Beginner / Intermediate / Advanced" progression;
+- no "Concept Check";
+- no "Expected Competencies" or learning-outcome ladders;
+- no interview/exam-preparation sections;
+- no bootcamp, tutorial, mastery, or "from zero" language;
 - no duplicated long explanations across notebooks;
 - evidence-based conclusions.
+
+The repository should read as a coherent **Master-level scientific and engineering portfolio**. A reviewer should immediately see experimental discipline, reproducibility, mathematical grounding, and technical judgment.
 
 ## 10. Source-of-Truth Rule
 
@@ -234,10 +240,11 @@ A scientific module is repository-ready only if:
 - [ ] Camera Calibration structure is respected;
 - [ ] exactly four canonical notebooks exist;
 - [ ] all four notebook headers follow the Camera presentation;
+- [ ] no bootcamp/tutorial/learning-progression language remains;
 - [ ] task titles/order align across all four notebooks;
 - [ ] Problem Statement ends with Completion Criterion;
 - [ ] Requirements ends with Requirement-to-Code Traceability;
-- [ ] Theory includes Expected Competencies and Scope and Limitations;
+- [ ] Theory contains Technical Synthesis and Scope and Limitations;
 - [ ] Implementation starts with Setup and ends with Final Result Summary;
 - [ ] README follows Camera Calibration order;
 - [ ] dependencies are explicit and pinned;
