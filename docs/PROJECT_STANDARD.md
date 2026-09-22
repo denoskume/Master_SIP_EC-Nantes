@@ -106,16 +106,16 @@ Mandatory order:
 2. Environment and Imports
 3. Configuration
 4. Paths
-5. Data Loading
-6. Data Validation
-7. Core Functions / Classes
+5. Core Functions / Classes
+6. Data Loading
+7. Data Validation
 8. Pipeline Implementation
 9. Execution
 10. Results
 11. Quantitative Evaluation
 12. Visual Evaluation
-13. Validation Checks
-14. Save Outputs
+13. Save Outputs
+14. Validation Checks
 15. Final Result Summary
 
 Rules:
