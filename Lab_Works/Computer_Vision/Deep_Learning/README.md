@@ -6,7 +6,7 @@ The module follows the same strict four-notebook structure used across the repos
 
 - [Problem Statement](notebooks/deep_learning_problem_statement.ipynb) — problem definition, fixed experiment settings, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/deep_learning_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
-- [Theory — Zero to Mastery](notebooks/deep_learning_theory.ipynb) — complete conceptual and mathematical explanation from data representation to optimization and confidence analysis.
+- [Theory](notebooks/deep_learning_theory.ipynb) — complete conceptual and mathematical explanation from data representation to optimization and confidence analysis.
 - [Implementation](notebooks/deep_learning.ipynb) — executable source of truth; every required task is immediately followed by its corresponding code.
 
 ## Outputs
