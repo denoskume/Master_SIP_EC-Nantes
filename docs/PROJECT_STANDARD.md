@@ -116,12 +116,38 @@ The Theory notebook is **not a teaching progression**. It must not contain "Conc
 Mandatory structural order:
 
 1. Camera-style branded header
-2. short source-of-truth description
+2. concise technical execution summary
 3. `## Setup — Environment and Configuration`
 4. the same `## 1. ...` through `## N. ...` tasks
 5. `## Final Result Summary`
 
-Purpose: provide the complete executable workflow. Subsections inside a task use `###` or deeper headings so they cannot be confused with top-level tasks.
+Purpose: provide the executable experimental workflow and its measured evidence.
+
+The Implementation notebook is **code-first**. It may contain only:
+
+- concise task objectives tied to the actual execution;
+- configuration and parameter values actually used;
+- executable code;
+- tables and figures produced by the execution;
+- measured metrics and diagnostics;
+- observations tied directly to generated outputs;
+- experimental retention/rejection decisions;
+- final numerical and output validation.
+
+The Implementation notebook must **not** contain:
+
+- general mathematical derivations;
+- generic equations already documented in Theory;
+- conceptual definitions;
+- textbook explanations;
+- "why" sections unrelated to a measured result;
+- tutorial questions or checkpoints;
+- general method-selection theory;
+- historical development labels such as "Step 1", "Improvement 2", or similar internal working notes.
+
+If an equation explains the method in general, it belongs in `*_theory.ipynb`. If a numerical value, table, curve, or conclusion is produced by running the experiment, it belongs in the Implementation notebook.
+
+Subsections inside a task use `###` or deeper headings so they cannot be confused with top-level tasks.
 
 ## 4. Task Alignment Rule
 
@@ -241,13 +267,17 @@ Mandatory principles:
 
 The repository should read as a coherent **Master-level scientific and engineering portfolio**. A reviewer should immediately see experimental discipline, reproducibility, mathematical grounding, and technical judgment.
 
-## 10. Source-of-Truth Rule
+## 10. Notebook Responsibility Rule
 
-- problem definition → `*_problem_statement.ipynb`;
-- engineering requirements and approach → `*_requirements_gathering_and_approach.ipynb`;
-- theory and derivations → `*_theory.ipynb`;
-- executable code, results, and final validation → `*.ipynb`;
-- concise navigation → `README.md`.
+Each artifact has one non-overlapping responsibility:
+
+- laboratory specification, fixed parameters, requested experiments, required deliverables, and completion criteria → `*_problem_statement.ipynb`;
+- engineering requirements, constraints, method choices, acceptance criteria, and traceability → `*_requirements_gathering_and_approach.ipynb`;
+- mathematical models, derivations, assumptions, interpretation, conditioning, and theoretical failure modes → `*_theory.ipynb`;
+- executable code, actual parameter configuration, measured results, generated figures, diagnostics, experiment-specific observations, and final validation → `*.ipynb`;
+- concise navigation and module summary → `README.md`.
+
+Long explanations must not be duplicated across roles. A mathematical formula that describes the general method belongs in Theory even when the corresponding computation is implemented in code.
 
 ## 11. Completion Gate
 
@@ -262,6 +292,8 @@ A scientific module is repository-ready only if:
 - [ ] Requirements ends with Requirement-to-Code Traceability;
 - [ ] Theory contains Technical Synthesis and Scope and Limitations;
 - [ ] Implementation starts with Setup and ends with Final Result Summary;
+- [ ] Implementation contains no general theory, generic derivations, or duplicated method equations;
+- [ ] Problem Statement, Requirements, and Theory contain no executable code or stored outputs;
 - [ ] README follows Camera Calibration order;
 - [ ] dependencies are explicit and pinned;
 - [ ] paths are portable;
