@@ -94,7 +94,10 @@ Prompt_Engineering_Audio_Classification/
 ├── data/
 │   └── ESC-50-master/             # downloaded locally, not tracked
 ├── notebooks/
-│   └── Prompt_Engineering_Audio_Classification.ipynb
+│   ├── prompt_engineering_audio_classification_problem_statement.ipynb
+│   ├── prompt_engineering_audio_classification_requirements_gathering_and_approach.ipynb
+│   ├── prompt_engineering_audio_classification_theory.ipynb
+│   └── prompt_engineering_audio_classification.ipynb
 ├── outputs/
 │   ├── figures/
 │   └── tables/
@@ -107,28 +110,16 @@ The `.venv/` directory and downloaded ESC-50 dataset are local resources and are
 
 ## Notebook Structure
 
-```text
-0. Setup
-1. Data and Output Paths
-2. ESC-50 Dataset Preparation
-3. Dataset Exploration
-4. CLAP Model Initialization
-5. Prompt Strategy Definition
-6. Zero-Shot Classification Framework
-7. Full Prompt Benchmark
-8. Best Prompt and Class-wise Accuracy
-9. Prompt Strategy Comparison
-10. Class-wise Accuracy Summary
-11. Main Benchmark Summary
-12. Top-k Accuracy
-13. AudioSet Metadata Analysis
-14. Comparison with Published ESC-50 Classifiers
-15. Results Summary
+The project follows the same four-notebook structure used across the repository:
 
-Discussion
-Conclusion
-Future Work
-```
+| Notebook | Purpose |
+| --- | --- |
+| `prompt_engineering_audio_classification_problem_statement.ipynb` | research problem, objectives, constraints, deliverables |
+| `prompt_engineering_audio_classification_requirements_gathering_and_approach.ipynb` | engineering requirements, experimental approach, acceptance criteria |
+| `prompt_engineering_audio_classification_theory.ipynb` | CLAP, zero-shot classification, embedding similarity, evaluation theory, limitations |
+| `prompt_engineering_audio_classification.ipynb` | executable implementation, benchmark results, figures, tables, and validation |
+
+All four notebooks use the same 15-task sequence from data preparation through the final results summary.
 
 ## Environment
 
@@ -193,10 +184,10 @@ python -m ipykernel install \
 
 ## Running the Notebook
 
-Open:
+Open the executable notebook:
 
 ```text
-notebooks/Prompt_Engineering_Audio_Classification.ipynb
+notebooks/prompt_engineering_audio_classification.ipynb
 ```
 
 Select the kernel:
