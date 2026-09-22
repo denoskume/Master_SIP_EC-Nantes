@@ -1,12 +1,12 @@
 # Image Transformation
 
-Beginner-first image-transformation laboratory covering pointwise intensity mappings, homogeneous-coordinate geometry, inverse mapping, interpolation, transformation composition, and affine image warping.
+image-transformation laboratory covering pointwise intensity mappings, homogeneous-coordinate geometry, inverse mapping, interpolation, transformation composition, and affine image warping.
 
 The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/image_transformation_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 25 required tasks.
 - [Requirements Gathering & Approach](notebooks/image_transformation_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/image_transformation_theory.ipynb) — theoretical explanation of intensity mappings, homogeneous coordinates, interpolation, affine geometry, limitations, and concept checks.
+- [Theory](notebooks/image_transformation_theory.ipynb) — mathematical formulation of intensity mappings, homogeneous coordinates, interpolation, affine geometry, and model limitations.
 - [Implementation](notebooks/image_transformation.ipynb) — executable workflow; each required task is presented in the same order as the companion notebooks.
 
 ## Outputs
