@@ -1,58 +1,69 @@
 # Image Processing
 
-Progressive M1 image-processing laboratory series organized with the same structure and documentation conventions as the Computer Vision laboratories in this repository.
+Progressive image-processing laboratory series organized under the repository-wide **Camera Calibration reference standard**.
+
+```text
+Canonical reference:
+Lab_Works/Computer_Vision/Camera_Calibration/
+```
+
+The subject matter and number of tasks vary by module. The structural roles, notebook traceability, README order, reproducibility rules, and validation discipline do not.
 
 ## Laboratory Sequence
 
-1. **Image_Processing_Fundamental** — digital-image representation, sampling, quantization, pixels, channels, statistics, histograms, noise, and image comparison.
-2. **Image_Transformation** — intensity and geometric transformations.
+1. **Image_Processing_Fundamental** — image formation, sampling, quantization, pixels, channels, statistics, histograms, noise, and image comparison.
+2. **Image_Transformation** — intensity and geometric transformations, interpolation, and affine mapping.
 3. **Filtering_in_Spatial_Domain** — convolution, smoothing, denoising, sharpening, and gradients.
-4. **Filtering_in_Frequency_Domain** — Fourier transform, spectra, low/high-pass filters, magnitude/phase, and notch filtering.
-5. **Image_Segmentation** — thresholding, morphology, connected components, contours, color segmentation, IoU, and Dice.
+4. **Filtering_in_Frequency_Domain** — Fourier analysis, classical frequency filters, periodic-noise removal, moiré suppression, and illumination correction.
+5. **Image_Segmentation** — thresholding, morphology, connected components, color segmentation, watershed, and segmentation metrics.
 
 ## Project
 
-- **Background_Subtraction** — complete foreground-extraction pipeline with registration, subtraction, enhancement, segmentation, morphology, and quantitative evaluation.
+- **Background_Subtraction** — neurointerventional moving-tool extraction using background modeling, histogram transformation, spatial/spectral filtering, morphology, segmentation, FOV masking, and quantitative evaluation.
 
-## Common Structure
+## Mandatory Module Structure
 
-Every laboratory follows the same organization:
+Every scientific module follows the Camera Calibration backbone:
 
 ```text
-Lab_Name/
-├── .venv/                  # local only, not tracked
-├── data/                   # inputs used by this lab
+Module_Name/
+├── data/
 ├── notebooks/
-│   └── Lab_Name.ipynb
+│   ├── module_problem_statement.ipynb
+│   ├── module_requirements_gathering_and_approach.ipynb
+│   ├── module_theory.ipynb
+│   └── module.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
 └── README.md
 ```
 
-Every notebook follows the same academic flow:
+The four notebooks use the same numbered task sequence inside a module:
 
 ```text
 Problem Statement
-Objectives
-Approach
-Configuration
-0. Setup
-1...N. Complete processing pipeline
-Validation Checks
-Practical Exercises
-Discussion
-Conclusion
+        ↓
+Requirements Gathering & Approach
+        ↓
+Theory
+        ↓
+Implementation
 ```
+
+The number of tasks is determined by the problem itself. It is **not** required to match Camera Calibration's task count.
 
 ## Execution Policy
 
-Notebooks are distributed without pre-executed outputs. Each laboratory uses its own local virtual environment and dedicated Jupyter kernel.
+- repository-relative paths only;
+- dedicated local `.venv` per module;
+- dependencies explicitly pinned in `requirements.txt`;
+- top-to-bottom notebook execution;
+- generated figures stored under `outputs/figures/`;
+- quantitative and visual validation where applicable;
+- explicit final validation checks;
+- no module is considered complete unless its four notebooks remain task-aligned.
 
-During local execution:
+## Reference Rule
 
-- figures are displayed inline with `plt.show()`;
-- figures are also saved to `outputs/figures/`;
-- outputs can be reviewed before committing the executed notebook and figures to GitHub.
-
-This keeps source notebooks clean while preserving the same final workflow used by the Computer Vision labs.
+When a structural question is ambiguous, **Camera Calibration wins**. Other modules are not templates for one another.
