@@ -17,7 +17,7 @@ The focus is on reproducible implementations, quantitative evaluation, technical
 | **Computer Vision** | [Camera Calibration](Lab_Works/Computer_Vision/Camera_Calibration) | Zhang planar calibration, normalized DLT, SVD, intrinsic matrix estimation, pose recovery, reprojection analysis | Per-view and global reprojection-error evaluation |
 | **Computer Vision** | [Feature Detection & Object Tracking](Lab_Works/Computer_Vision/Feature_Detection) | ORB, Hamming matching, RANSAC, homography, perspective transformation | Match/inlier analysis and tracked-object visualization |
 | **Deep Learning** | [MNIST Classification](Lab_Works/Computer_Vision/Deep_Learning) | PyTorch MLP, BatchNorm, ReLU, Adam, confidence analysis | Comparison of 128 / 256 / 512 hidden-unit architectures |
-| **Image Processing** | [Image Processing Labs](Lab_Works/Image_Processing) | Spatial filtering, Fourier analysis, transformations, morphology, segmentation | Executed notebooks, generated figures, numerical checks |
+| **Medical Image Processing** | [Background Subtraction](Lab_Works/Image_Processing/Project/Background_Subtraction) | Temporal-median background modeling, spatial/spectral filtering, morphology, thresholding, EM/GMM ablation, FOV masking | Sequence-level SAD/MSE/PSNR, controlled ablations, qualitative overlays |\n| **Image Processing** | [Image Processing Labs](Lab_Works/Image_Processing) | Spatial filtering, Fourier analysis, transformations, morphology, segmentation | Executed notebooks, generated figures, numerical checks |
 
 ---
 
@@ -152,6 +152,34 @@ The image-processing work is organized as a set of focused laboratories:
 - HSV segmentation
 - distance transforms and watershed
 - Dice, IoU, precision, recall, and pixel accuracy
+
+### [Neurointerventional Background Subtraction](Lab_Works/Image_Processing/Project/Background_Subtraction)
+
+Controlled foreground-extraction study for guidewire and microcatheter enhancement in fluoroscopic image sequences.
+
+The retained pipeline is supported by staged ablation of:
+
+```text
+temporal background model
+        ↓
+fixed radiometric mapping
+        ↓
+spatial Gaussian filtering
+        ↓
+spectral high-pass filtering
+        ↓
+morphological refinement
+        ↓
+threshold segmentation
+        ↓
+field-of-view constraint
+        ↓
+sequence-level validation
+```
+
+The project also evaluates an EM/GMM segmentation alternative and retains it only as comparative evidence when it underperforms the deterministic threshold branch.
+
+[Open Background Subtraction project →](Lab_Works/Image_Processing/Project/Background_Subtraction)
 
 [Open Image Processing workspace →](Lab_Works/Image_Processing)
 
