@@ -6,7 +6,7 @@ The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/background_subtraction_requirements_gathering_and_approach.ipynb) — engineering requirements, controlled-ablation rules, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/background_subtraction_theory.ipynb) — complete theoretical explanation of background modeling, filtering, segmentation, EM/GMM comparison, metrics, limitations, and concept checks.
+- [Theory](notebooks/background_subtraction_theory.ipynb) — mathematical and statistical basis of background modeling, filtering, segmentation, EM/GMM comparison, metrics, and limitations.
 - [Implementation](notebooks/background_subtraction.ipynb) — executable source of truth; it reproduces the original teacher baseline first and then evaluates one controlled improvement at a time.
 
 ## Outputs
