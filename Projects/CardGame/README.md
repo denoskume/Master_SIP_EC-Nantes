@@ -1,135 +1,342 @@
 # CardGame — Rouge Gagne, Noir Perd
 
-Interactive card-tracking and betting game developed with Python and Pygame.
+Interactive card-tracking and betting game developed in Python with Pygame.
 
-The player follows a red card through a timed shuffle sequence and must identify its final position. The project combines object-oriented programming, event-driven game logic, state management, animation, audio feedback, player profiles, betting mechanics, and persistent game history.
-
-## Live Game Demo
+The player observes one red card and two black cards, follows the red card through an animated shuffle, and must identify its final position before the selection timer expires.
 
 ![CardGame Live Demo](docs/cardgame_demo.gif)
 
-A full recorded gameplay session is also available in [`docs/cardgame_demo.mp4`](docs/cardgame_demo.mp4).
+---
 
-## Game Objective
+## Context
 
-Three cards are displayed at the beginning of each round:
+The project combines a simple visual-memory game with a complete event-driven application architecture. The technical objective is not only to display moving cards, but to coordinate player state, betting rules, timed phases, animations, audio feedback, persistent history, and user-interface rendering without blocking the main Pygame loop.
 
-- one red card,
-- two black cards.
+The implementation is organized as independent Python modules rather than notebooks. Documentation for the **problem statement**, **requirements and approach**, and **theoretical foundations** is therefore consolidated in this README, while executable behavior remains in `src/*.py`.
 
-The player watches the cards, follows the red card during the shuffle animation, and then selects the card believed to be red.
+---
 
-A correct choice increases the player's balance. A wrong choice or timeout decreases it.
+## Problem Statement
 
-## Gameplay
+Design and implement an interactive three-card tracking game in which one red card must remain logically identifiable while card positions change through animated random swaps.
 
-Each round follows the same state-driven sequence:
+The application must:
 
-```text
-START
-  ↓
-PLAYER PROFILE
-  ↓
-BET SETUP
-  ↓
-SHOW CARDS
-  ↓
-SHUFFLE
-  ↓
-CHOOSE
-  ↓
-RESULT
-  ├── Continue → BET SETUP
-  └── Balance < minimum bet → GAME OVER
-```
+- create and validate a player profile;
+- maintain an independent player balance;
+- enforce configurable betting limits and turbo multipliers;
+- display one red and two black cards before every round;
+- hide card identity during shuffling while preserving each card's logical identity;
+- animate random pairwise card swaps without blocking the event loop;
+- enforce timed observation, shuffle, and selection phases;
+- resolve a round as win, loss, or timeout;
+- update the player's balance from the effective stake;
+- stop play when the remaining balance is below the minimum bet;
+- support pause/resume behavior;
+- render all screens and game states consistently;
+- persist recent round history to JSON;
+- continue operating when optional audio playback is unavailable.
 
-### Round Timing
+### Inputs and Fixed Parameters
 
-- Card colors are visible for 10 seconds.
-- The three cards are then shuffled for 10 seconds.
-- The player has 10 seconds to select a card.
-- Failure to choose before the timer expires counts as a loss.
-
-## Betting System
-
-The game starts with an initial player balance of **$30**.
-
-The default betting configuration is:
-
-| Parameter | Value |
+| Item | Current value |
 | --- | ---: |
+| Window size | 960 × 630 px |
+| Target frame rate | 60 FPS |
+| Cards per round | 3 |
+| Red cards | 1 |
+| Black cards | 2 |
+| Initial balance | $30 |
 | Minimum bet | $10 |
 | Maximum bet | $100 |
 | Bet increment | $5 |
 | Turbo multipliers | ×1, ×2, ×3 |
+| Observation time | 10 s |
+| Shuffle time | 10 s |
+| Selection time | 10 s |
+| Swap interval | 300 ms |
+| Swap animation duration | 300 ms |
+| Persisted history limit | 200 rounds |
+| Runtime history file | `data/history.json` |
 
-The effective stake is:
+### Completion Criterion
+
+The project is complete when the game can progress from player setup through repeated betting rounds without blocking the main event loop, every round produces a deterministic state transition and balance update, invalid or timed-out selections are handled explicitly, persistent history is maintained, and the application remains usable when optional media resources are unavailable.
+
+---
+
+## Requirements and Approach
+
+The software is designed around explicit separation of responsibilities: domain state is kept outside the rendering layer, the game controller owns transitions and timing, and the main loop only coordinates events, updates, rendering, and frame pacing.
+
+### Global Requirements
+
+| Requirement | Implemented approach |
+| --- | --- |
+| Application loop | Pygame event → update → render loop at 60 FPS |
+| Game lifecycle | explicit finite-state machine |
+| Player state | dedicated `User` object |
+| Betting state | dedicated `Bet` object |
+| Core controller | `CardGame` |
+| Rendering | isolated in `dashboard.py` |
+| Shuffle motion | non-blocking interpolation between card slots |
+| Timing | `pygame.time.get_ticks()` |
+| Persistence | bounded JSON history |
+| Audio | optional Pygame mixer with graceful fallback |
+| Runtime data | stored outside source code |
+| Platform support | standard desktop Pygame; WSLg audio handled when available |
+
+### Functional Requirements
+
+#### Player and Session
+
+**Approach:** collect a nickname and avatar selection before entering the betting workflow. Store identity and balance in a `User` instance.
+
+**Acceptance:** a valid player can enter the game, preserve identity during the session, and reset to the configured initial balance when the game is restarted.
+
+#### Betting
+
+**Approach:** manage minimum/maximum bet, $5 increments, and turbo multiplier independently in `Bet`.
+
+The nominal stake is
 
 ```text
-stake = bet × turbo multiplier
+stake = bet × turbo
 ```
 
-If the selected card is red, the stake is added to the player's balance as profit.
+and the resolved stake is capped by the available balance.
 
-If the selected card is black, or the selection timer expires, the stake is deducted from the balance.
+**Acceptance:** the base bet remains inside configured limits, the turbo multiplier remains in `{1,2,3}`, and a round cannot start from an invalid betting configuration.
 
-The game ends when the player's balance becomes lower than the minimum allowed bet.
+#### Round Initialization
 
-## Main Features
+**Approach:** create three card objects at fixed screen slots, randomly assign exactly one red identity, and start the observation timer.
 
-- Interactive Pygame user interface
-- Player nickname and avatar selection
-- Three-card red/black tracking game
-- Animated random card shuffling
-- Timed observation and selection phases
-- Configurable betting amount
-- Turbo multipliers ×1, ×2 and ×3
-- Win, loss and shuffle sound effects
-- Pause/resume with the `SPACE` key
-- Per-round timing and statistics
-- Persistent JSON game history
-- Recent-session history displayed on the start screen
-- Game-over summary
+**Acceptance:** every round contains exactly three cards and exactly one card has `is_red=True`.
 
-## Architecture
+#### Timed Game Phases
 
-The project separates game logic into focused Python modules:
+**Approach:** represent observation, shuffling, and selection as separate states driven by elapsed time rather than blocking delays.
+
+**Acceptance:** the game advances automatically after 10 seconds of observation, after 10 seconds of shuffling, and resolves a timeout loss after 10 seconds without a card selection.
+
+#### Shuffle Animation
+
+**Approach:** randomly select two card indices and interpolate their rectangles over 300 ms while card identity remains attached to the card object.
+
+**Acceptance:** the visible positions change continuously while the logical red/black identity is never reassigned during the shuffle.
+
+#### Round Resolution
+
+**Approach:** reveal the result, compute the effective stake, update the balance, record the round, and transition to either `RESULT` or `GAME_OVER`.
+
+**Acceptance:** red-card selection produces a win, black-card selection or timeout produces a loss, balance never becomes negative, and the game ends when the balance falls below the minimum bet.
+
+#### Persistence
+
+**Approach:** append one structured record per completed round to `data/history.json` and retain only the 200 most recent entries.
+
+**Acceptance:** valid history survives application restarts and malformed/missing history falls back safely to an empty list.
+
+#### Rendering and Media
+
+**Approach:** delegate visual rendering to `dashboard.py`; load image/audio assets when available and use safe fallback behavior when optional resources cannot be initialized.
+
+**Acceptance:** game logic remains functional even if audio cannot be played.
+
+---
+
+## Theoretical Foundations
+
+### Event-Driven Game Loop
+
+Pygame applications are reactive systems. Each frame executes three logical stages:
+
+```text
+Input events
+    ↓
+State update
+    ↓
+Rendering
+    ↓
+Display refresh
+```
+
+The main loop in `main.py` processes input first, updates the active game state, renders the corresponding screen, flips the display buffer, and limits execution to 60 FPS.
+
+This structure prevents gameplay logic from being tied directly to drawing code.
+
+### Finite-State Machine
+
+The game lifecycle is modeled with explicit states:
+
+```text
+START_SCREEN
+    ↓
+MENU
+    ↓
+BET_SETUP
+    ↓
+SHOW_BACKS
+    ↓
+SHUFFLE
+    ↓
+CHOOSE
+    ↓
+RESULT ──────────────┐
+    │                │
+    ├─ next round ───┘
+    │
+    └─ balance < minimum bet
+             ↓
+         GAME_OVER
+
+PAUSE temporarily suspends active state updates.
+```
+
+At any instant, one state determines which events, update rules, and rendering function are valid. This limits accidental interactions between unrelated phases.
+
+### Object-Oriented State Separation
+
+The project separates persistent domain concepts:
+
+- `User` owns player identity and balance;
+- `Bet` owns wager limits, amount, multiplier, and stake calculation;
+- `Card` owns card identity and screen rectangle;
+- `CardGame` coordinates states, timers, animation, round resolution, and persistence;
+- `dashboard.py` renders the current state.
+
+This separation reduces coupling between user-interface code and game rules.
+
+### Card Identity vs Card Position
+
+A key invariant is that **card identity belongs to the card object, not to a screen slot**.
+
+During a shuffle, two card rectangles exchange positions, but `is_red` remains attached to the original object. Therefore tracking correctness depends on motion, not on reassigning red/black labels after each swap.
+
+### Non-Blocking Animation
+
+A blocking sleep would freeze input processing and rendering. Instead, the shuffle uses interpolation.
+
+For start position $p_0$, target position $p_1$, and normalized progress $u\in[0,1]$,
+
+```text
+p(u) = p0 + u × (p1 - p0)
+```
+
+The position is recomputed on successive frames until the 300 ms animation interval is complete.
+
+### Betting Model
+
+Let:
+
+- $B$ be current balance;
+- $b$ be the selected base bet;
+- $m\in\{1,2,3\}$ be the turbo multiplier.
+
+The nominal stake is
+
+```text
+s = b × m
+```
+
+and the game resolves an effective stake no larger than the current balance.
+
+For a win:
+
+```text
+B' = B + s
+```
+
+For a loss or timeout:
+
+```text
+B' = max(0, B - s)
+```
+
+The session enters `GAME_OVER` when
+
+```text
+B' < minimum bet
+```
+
+so no new valid round can be started.
+
+### Time-Based State Transitions
+
+Observation, shuffle, and selection phases are controlled from elapsed time:
+
+```text
+elapsed = current_ticks - state_start_time
+```
+
+Using elapsed time instead of frame counts keeps phase duration approximately independent of small frame-rate fluctuations.
+
+### Persistent History
+
+Each completed round records:
+
+- round number;
+- player name;
+- base bet;
+- multiplier;
+- effective stake;
+- result;
+- chosen card index;
+- red-card index;
+- round duration;
+- balance after the round;
+- timestamp.
+
+The data is serialized as JSON. The history is bounded to the latest 200 records to prevent unbounded growth.
+
+### Design Limitations
+
+The current project intentionally remains a local single-player desktop game.
+
+It does not include:
+
+- networking or multiplayer synchronization;
+- cryptographic randomness;
+- real-money transactions;
+- database-backed accounts;
+- automated testing infrastructure;
+- AI-based card tracking;
+- physics-based card motion.
+
+---
+
+## Implementation Architecture
 
 ```text
 main.py
   │
   ├── User
-  │     └── player identity and balance
+  │     └── identity + balance
   │
   ├── Bet
-  │     └── bet limits, amount and turbo multiplier
+  │     └── wager limits + turbo + stake
   │
   └── CardGame
-        ├── state machine
-        ├── cards and shuffle logic
-        ├── timers
-        ├── round resolution
-        ├── history persistence
+        ├── finite-state controller
+        ├── cards and shuffle animation
+        ├── timers and input dispatch
+        ├── win/loss resolution
+        ├── JSON history
         └── Dashboard rendering
 ```
 
-### State Machine
+### Module Responsibilities
 
-`CardGame` uses explicit states to control the game lifecycle:
+| Module | Responsibility |
+| --- | --- |
+| `src/main.py` | application initialization, Pygame configuration, object creation, 60 FPS main loop |
+| `src/game.py` | game states, card model, timers, shuffle animation, input dispatch, round resolution, persistence |
+| `src/dashboard.py` | start, menu, betting, gameplay, result, pause, and game-over rendering |
+| `src/user.py` | nickname, avatar index, initial/current balance, win/loss balance operations |
+| `src/bet.py` | minimum/maximum bet, increments, turbo multiplier, stake calculation, validation |
 
-```text
-START_SCREEN
-MENU
-BET_SETUP
-SHOW_BACKS
-SHUFFLE
-CHOOSE
-RESULT
-GAME_OVER
-PAUSE
-```
-
-This keeps user input, update logic and rendering synchronized with the active phase of the game.
+---
 
 ## Project Structure
 
@@ -137,17 +344,6 @@ This keeps user input, update logic and rendering synchronized with the active p
 CardGame/
 ├── src/
 │   ├── assets/
-│   │   ├── avatar1.png
-│   │   ├── avatar2.png
-│   │   ├── avatar3.png
-│   │   ├── card_back_black.png
-│   │   ├── card_back_red.png
-│   │   ├── card_front.png
-│   │   ├── card_logo_back.png
-│   │   ├── card_logo_front.png
-│   │   ├── lose.mp3
-│   │   ├── shuffle.mp3
-│   │   └── win.mp3
 │   ├── bet.py
 │   ├── dashboard.py
 │   ├── game.py
@@ -156,49 +352,16 @@ CardGame/
 ├── data/
 │   └── .gitkeep
 ├── docs/
-│   ├── Report.pdf
-│   ├── Game_Presentation.pptx
-│   ├── cardgame_demo.gif
-│   └── cardgame_demo.mp4
+│   ├── CardGame_Report.pdf
+│   └── cardgame_demo.gif
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
 
-`data/history.json` is created automatically while playing and is intentionally excluded from Git.
+`data/history.json` is generated at runtime and is intentionally not tracked by Git.
 
-## Module Responsibilities
-
-### `main.py`
-
-Initializes Pygame, creates the player and betting objects, starts `CardGame`, and runs the main 60 FPS event/update/render loop.
-
-### `game.py`
-
-Contains the core game engine:
-
-- card representation,
-- state transitions,
-- shuffle animation,
-- timers,
-- player selection,
-- win/loss resolution,
-- balance updates,
-- pause handling,
-- game statistics,
-- JSON history persistence.
-
-### `dashboard.py`
-
-Contains the visual rendering functions for the different screens and overlays.
-
-### `user.py`
-
-Defines the player profile and manages the player's balance.
-
-### `bet.py`
-
-Defines betting limits, bet adjustment, turbo multipliers and effective stake computation.
+---
 
 ## Installation
 
@@ -206,13 +369,10 @@ From the repository root:
 
 ```bash
 cd Projects/CardGame
-```
-
-Create a dedicated virtual environment:
-
-```bash
 python3 -m venv .venv
 source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
 On Windows PowerShell:
@@ -220,16 +380,15 @@ On Windows PowerShell:
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-```
-
-Install the dependency:
-
-```bash
 python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-## Run the Game
+The only direct package dependency is Pygame.
+
+---
+
+## Run
 
 From `Projects/CardGame/`:
 
@@ -237,71 +396,42 @@ From `Projects/CardGame/`:
 python src/main.py
 ```
 
-The window opens at **960 × 630 pixels** and runs at **60 FPS**.
+The application opens a **960 × 630** window and targets **60 FPS**.
+
+---
 
 ## Controls
 
 | Action | Control |
 | --- | --- |
-| Continue from start screen | Any key or mouse click |
-| Enter nickname | Keyboard |
-| Select avatar | Mouse click |
-| Change bet | `−` / `+` buttons |
-| Select turbo | ×1 / ×2 / ×3 buttons |
+| Leave start screen | any key or mouse click |
+| Enter nickname | keyboard |
+| Select avatar | mouse |
+| Decrease / increase bet | `−` / `+` buttons |
+| Select turbo | ×1 / ×2 / ×3 |
 | Start round | `START` button |
-| Choose a card | Mouse click |
+| Select card | mouse click |
 | Pause / resume | `SPACE` |
-| Continue / return to menu / quit | On-screen buttons |
+| Continue / menu / quit | on-screen controls |
 
-## Runtime History
-
-Each completed round records information such as:
-
-```text
-round
-player
-bet
-multiplier
-stake
-result
-chosen card
-red-card position
-round duration
-balance after round
-timestamp
-```
-
-The history is saved locally to:
-
-```text
-data/history.json
-```
-
-The game keeps at most the 200 most recent entries.
+---
 
 ## Documentation
 
-The original academic documentation is preserved in `docs/`:
+- [Academic report](docs/CardGame_Report.pdf)
+- [Gameplay demo](docs/cardgame_demo.gif)
 
-- [`Report.pdf`](docs/Report.pdf)
-- [`Game_Presentation.pptx`](docs/Game_Presentation.pptx)
+---
 
 ## Technologies
 
-- Python
-- Pygame
-- Object-Oriented Programming
-- Event-driven programming
-- Finite-state game logic
-- JSON persistence
-- 2D animation
-- Audio integration
+**Python • Pygame • Object-Oriented Programming • Event-Driven Programming • Finite-State Machines • JSON Persistence • 2D Animation • Audio Integration**
 
-## Participants
+---
 
-**Denos Kume**  
-**Sena FUKABE**
+## Academic Context
 
+**Participants:** Denos Kume, Sena FUKABE  
 **Supervisor:** Mira Rizkallah  
 **Program:** M1 CORO DASSIP — École Centrale de Nantes  
 **Academic Year:** 2025–2026
