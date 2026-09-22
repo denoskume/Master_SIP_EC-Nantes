@@ -2,7 +2,7 @@
 
 Handwritten-digit classification with a one-hidden-layer MLP in PyTorch, comparing hidden sizes of 128, 256, and 512 neurons on MNIST.
 
-The module follows the same strict four-notebook structure used across the repository:
+The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/deep_learning_problem_statement.ipynb) — problem definition, fixed experiment settings, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/deep_learning_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
