@@ -1,12 +1,12 @@
 # Image Processing Fundamental
 
-Beginner-first digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
+digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
 
 The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/image_processing_fundamental_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
 - [Requirements Gathering & Approach](notebooks/image_processing_fundamental_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/image_processing_fundamental_theory.ipynb) — complete theoretical explanation from digital-image formation to representation, statistics, noise, metrics, failure modes, and concept checks.
+- [Theory](notebooks/image_processing_fundamental_theory.ipynb) — mathematical and numerical foundations for image representation, statistics, noise models, metrics, and failure analysis.
 - [Implementation](notebooks/image_processing_fundamental.ipynb) — executable workflow; each required task is presented in the same order as the companion notebooks.
 
 ## Outputs
