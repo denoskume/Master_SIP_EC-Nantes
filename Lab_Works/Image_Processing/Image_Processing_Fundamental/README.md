@@ -1,6 +1,6 @@
 # Image Processing Fundamental
 
-digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
+Digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
 
 The module is organized into four complementary notebooks:
 
