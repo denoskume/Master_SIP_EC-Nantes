@@ -61,7 +61,23 @@ Mandatory structural order:
 5. `## 1. ...` through `## N. ...`
 6. `## Completion Criterion`
 
-Purpose: define what must be solved and what completion means. Implementation code does not belong here except tiny illustrative fragments when essential.
+The Problem Statement is a **standalone laboratory specification**, not a project summary or checklist.
+
+It must be sufficiently complete that another engineer can implement and evaluate the laboratory using this notebook alone.
+
+Required content:
+
+- **Context:** technical/scientific setting, data characteristics, modeling assumptions, and the engineering difficulty being addressed.
+- **Problem Statement:** precise objective, expected deliverables, measurable outputs, and explicit scope boundaries.
+- **Inputs and Fixed Parameters:** datasets, filenames/paths, dimensions, constants, ranges, algorithm settings, conventions, candidate parameter sets, and output requirements whenever these are fixed by the experiment.
+- **Numbered tasks:** each task must specify the work to perform, relevant equations or mathematical model, fixed/controlled variables, required numerical or visual evidence, and any comparison/decision rule.
+- **Experiments:** parameter sweeps and ablations must state the tested values and the rule used to retain/reject a configuration.
+- **Evaluation:** required metrics, figures, tables, residual/diagnostic analyses, and numerical validity conditions must be explicit.
+- **Completion Criterion:** objective conditions under which the laboratory is considered complete.
+
+A numbered task must not be reduced to a one-line instruction such as “implement X” or “analyze Y”. Where appropriate it should contain sub-questions, equations, parameter values, expected figures/tables, validation conditions, and requested technical interpretation.
+
+Implementation code does not belong here except very small interface/signature fragments when the required API itself is part of the laboratory specification.
 
 ### Requirements Gathering & Approach
 
