@@ -1,6 +1,6 @@
-numpy
-matplotlib
-torch
-python-mnist
-tqdm
-ipykernel
+numpy==2.5.3
+matplotlib==3.11.2
+torch==2.14.0
+python-mnist==0.7
+tqdm==4.70.1
+ipykernel==7.3.0
