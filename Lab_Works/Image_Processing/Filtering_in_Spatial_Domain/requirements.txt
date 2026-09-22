@@ -1,6 +1,6 @@
-numpy
-matplotlib
-Pillow
-scipy
-opencv-python
-ipykernel
+numpy==2.5.3
+matplotlib==3.11.2
+Pillow==12.3.0
+scipy==1.18.1
+opencv-python==5.0.0.93
+ipykernel==7.3.0
