@@ -8,8 +8,10 @@
 </div>
 
 <div style="border:2px solid #333; padding:14px 20px; margin:15px auto 25px auto; width:85%; max-width:900px; box-sizing:border-box; text-align:center;">
-  <h1 style="margin:0;"><b>CardGame — Rouge Gagne, Noir Perd</b></h1>
+  <h1 style="margin:0;"><b>CardGame</b></h1>
 </div>
+
+### Rouge Gagne, Noir Perd
 
 Interactive card-tracking and betting game developed in Python with Pygame.
 
