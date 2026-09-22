@@ -59,7 +59,7 @@ By the end of the notebook, the reader should be able to:
 23. Recognize common segmentation mistakes.
 24. Explain classical segmentation concepts in interviews and exams.
 
-## Learning Philosophy
+## Method
 
 The notebook is designed for an **absolute beginner**.
 
@@ -75,6 +75,21 @@ Each topic follows a progressive pattern:
 8. interview/exam questions.
 
 The objective is not simply to generate a binary mask, but to understand why each processing step is required.
+
+## Fundamental Configuration
+
+| Parameter | Value |
+|---|---:|
+| Main numeric library | NumPy |
+| Visualization | Matplotlib |
+| Image I/O | Pillow |
+| Morphology / measurements | SciPy |
+| Segmentation operations | OpenCV |
+| Binary-mask convention | foreground / background |
+| Primary stored dtype | `uint8` |
+| Notebook environment | Jupyter |
+| Python version | 3.12.x |
+| Generated figures | PNG |
 
 ## Project Structure
 
@@ -104,7 +119,9 @@ The `.venv/` directory is local and is not tracked by Git.
 
 ```text
 Problem Statement
-Learning Objectives
+Objectives
+Approach
+Fundamental Configuration
 
 0. Setup
 1. What Is Image Segmentation?
@@ -664,7 +681,7 @@ Use:
 * contours;
 * boundary linking.
 
-## Generated Figures
+## Outputs
 
 During execution, figures are saved under:
 
@@ -770,7 +787,7 @@ from top to bottom.
 
 The committed notebook should retain its executed outputs so that results and visualizations remain directly visible on GitHub.
 
-## Validation
+## Evaluation
 
 The notebook includes checks and reasoning around:
 
@@ -784,7 +801,15 @@ The notebook includes checks and reasoning around:
 * reproducibility of the segmentation pipeline.
 
 
-## Technologies and Concepts
+## Practical Exercises
+
+Exercises cover threshold selection, morphology, connected components, contour analysis, color segmentation, watershed, and Dice/IoU evaluation.
+
+## Limitations
+
+This laboratory focuses on classical image segmentation. Deep semantic/instance segmentation, learned feature extractors, and production annotation pipelines are outside its scope.
+
+## Technologies
 
 * Python
 * NumPy
@@ -818,6 +843,10 @@ The notebook includes checks and reasoning around:
 * Precision
 * Recall
 * Pixel Accuracy
+
+## Learning Outcome
+
+After completing this laboratory, the learner should be able to select, implement, combine, and evaluate classical segmentation methods from thresholding through morphology, connected regions, color cues, watershed, and mask metrics.
 
 ## Participants
 
