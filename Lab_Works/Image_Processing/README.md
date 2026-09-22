@@ -1,6 +1,6 @@
 # Image Processing
 
-Progressive image-processing laboratory series organized under the repository-wide **Camera Calibration reference standard**.
+Image-processing laboratory portfolio organized under the repository-wide **Camera Calibration reference standard**.
 
 ```text
 Canonical reference:
@@ -9,7 +9,7 @@ Lab_Works/Computer_Vision/Camera_Calibration/
 
 The subject matter and number of tasks vary by module. The structural roles, notebook traceability, README order, reproducibility rules, and validation discipline do not.
 
-## Laboratory Sequence
+## Laboratory Modules
 
 1. **Image_Processing_Fundamental** — image formation, sampling, quantization, pixels, channels, statistics, histograms, noise, and image comparison.
 2. **Image_Transformation** — intensity and geometric transformations, interpolation, and affine mapping.
