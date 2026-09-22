@@ -1,5 +1,6 @@
 numpy
 matplotlib
 Pillow
-scikit-image
+scipy
+opencv-python
 ipykernel
