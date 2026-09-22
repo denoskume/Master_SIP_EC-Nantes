@@ -6,7 +6,7 @@ The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/filtering_in_spatial_domain_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
 - [Requirements Gathering & Approach](notebooks/filtering_in_spatial_domain_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/filtering_in_spatial_domain_theory.ipynb) — complete theoretical explanation of spatial filtering, convolution, filter families, derivative operators, limitations, and concept checks.
+- [Theory](notebooks/filtering_in_spatial_domain_theory.ipynb) — mathematical formulation of spatial filtering, convolution, filter families, derivative operators, and limitations.
 - [Implementation](notebooks/filtering_in_spatial_domain.ipynb) — executable workflow; each required task is presented in the same order as the companion notebooks.
 
 ## Outputs
