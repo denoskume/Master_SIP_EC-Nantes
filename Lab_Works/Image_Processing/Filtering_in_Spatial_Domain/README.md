@@ -55,7 +55,7 @@ By the end of the notebook, the learner should be able to:
 21. Choose a filter based on the degradation and objective.
 22. Validate results numerically and visually.
 
-## Learning Method
+## Method
 
 ```text
 Visual idea
@@ -78,6 +78,21 @@ Common pitfall
     ↓
 Validation
 ```
+
+## Fundamental Configuration
+
+| Parameter | Value |
+|---|---:|
+| Main numeric library | NumPy |
+| Visualization | Matplotlib |
+| Image I/O | Pillow |
+| Scientific filtering | SciPy |
+| Computer vision operations | OpenCV |
+| Primary stored dtype | `uint8` |
+| Processing dtype | floating point / signed where required |
+| Notebook environment | Jupyter |
+| Python version | 3.12.3 |
+| Generated figures | PNG |
 
 ## Project Structure
 
@@ -106,11 +121,9 @@ The `.venv/` directory is local and is not tracked by Git.
 
 ```text
 Problem Statement
-Prerequisites
 Objectives
-Learning Approach
-Spatial Filtering Map
-Experimental Configuration
+Approach
+Fundamental Configuration
 
 0. Setup
 1. Data and Output Paths
@@ -176,7 +189,7 @@ python -m ipykernel install \
   --display-name "Filtering in Spatial Domain (.venv)"
 ```
 
-## Running
+## Running the Notebook
 
 Open:
 
@@ -194,7 +207,7 @@ Then run all cells from top to bottom.
 
 The committed notebook should retain its executed outputs so that the results remain visible directly on GitHub.
 
-## Generated Figures
+## Outputs
 
 The notebook generates and saves:
 
@@ -240,7 +253,31 @@ Successful execution prints:
 All spatial-filtering validation checks passed.
 ```
 
-## Core Learning Outcome
+## Practical Exercises
+
+Exercises cover manual convolution, border handling, smoothing, denoising, sharpening, derivative operators, RGB filtering, parameter selection, and numerical validation.
+
+## Limitations
+
+This laboratory focuses on spatial-domain filtering. Fourier-domain filtering, segmentation, learned filters, and task-specific computer-vision pipelines are treated in later modules.
+
+## Technologies
+
+- Python
+- NumPy
+- Matplotlib
+- Pillow
+- SciPy
+- OpenCV
+- Jupyter
+- Convolution
+- Gaussian filtering
+- Median filtering
+- Bilateral filtering
+- Laplacian sharpening
+- Sobel / Prewitt / Scharr
+
+## Learning Outcome
 
 After this laboratory, the learner should be able to answer:
 
