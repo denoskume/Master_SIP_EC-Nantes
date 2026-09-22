@@ -42,7 +42,7 @@ By the end of the notebook, the reader should be able to:
 18. Validate frequency-domain processing numerically and visually.
 19. Recognize common FFT implementation mistakes.
 
-## Learning Philosophy
+## Method
 
 The notebook is designed for an **absolute beginner** and progresses from intuition to implementation.
 
@@ -58,6 +58,20 @@ Each major concept follows the same structure:
 8. interview and exam questions.
 
 The goal is not simply to execute FFT functions, but to understand how spatial image structure is represented in the frequency domain.
+
+## Fundamental Configuration
+
+| Parameter | Value |
+|---|---:|
+| Main numeric library | NumPy |
+| Visualization | Matplotlib |
+| Image I/O | Pillow |
+| Fourier transform | NumPy FFT |
+| Frequency origin | centered with `fftshift` |
+| Reconstruction | inverse FFT |
+| Notebook environment | Jupyter |
+| Python version | 3.12.x |
+| Generated figures | PNG |
 
 ## Project Structure
 
@@ -109,7 +123,9 @@ The `.venv/` directory is local and is not tracked by Git.
 
 ```text
 Problem Statement
-Learning Objectives
+Objectives
+Approach
+Fundamental Configuration
 
 0. Setup
 1. Spatial Frequency
@@ -362,7 +378,7 @@ $$
 
 The notebook also explains why PSNR must be interpreted in context and should not automatically be treated as a perceptual-quality score.
 
-## Validation
+## Evaluation
 
 The notebook performs checks for:
 
@@ -374,7 +390,7 @@ The notebook performs checks for:
 * high-pass DC rejection;
 * consistency of frequency masks.
 
-## Generated Figures
+## Outputs
 
 During execution, figures are saved to:
 
@@ -514,7 +530,11 @@ They include:
 * illumination correction;
 * circular-versus-linear convolution.
 
-## Technologies and Concepts
+## Limitations
+
+This laboratory focuses on classical Fourier-domain image processing. It does not cover wavelet transforms, learned frequency representations, or advanced restoration methods.
+
+## Technologies
 
 * Python
 * NumPy
@@ -544,9 +564,13 @@ They include:
 * MSE
 * PSNR
 
+## Learning Outcome
+
+After completing this laboratory, the learner should be able to interpret a 2-D image spectrum, design and justify classical frequency-domain filters, diagnose periodic interference, and validate reconstruction and filtering results numerically and visually.
+
 ## Participants
 
-**Denos KumeS**
+**Denos Kume**
 
 Master SIP
 École Centrale de Nantes
