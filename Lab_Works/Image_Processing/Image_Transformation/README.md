@@ -54,7 +54,7 @@ The laboratory develops the complete fundamental transformation workflow:
 
 ## Method
 
-The laboratory follows the same learning structure as the Computer Vision notebooks:
+The laboratory follows the same beginner-first learning structure as `Image_Processing_Fundamental`:
 
 ```text
 Concept
@@ -100,7 +100,7 @@ Image Transformation
     └── Affine transformation
 ```
 
-## Experimental Configuration
+## Fundamental Configuration
 
 | Parameter | Value |
 |---|---:|
@@ -143,8 +143,7 @@ The `.venv/` directory is local and is not tracked by Git.
 Problem Statement
 Objectives
 Approach
-Transformation Map
-Experimental Configuration
+Fundamental Configuration
 
 0. Setup
 1. Data and Output Paths
