@@ -7,7 +7,7 @@ The module is organized into four complementary notebooks:
 - [Problem Statement](notebooks/image_segmentation_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 28 required tasks.
 - [Requirements Gathering & Approach](notebooks/image_segmentation_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
 - [Theory](notebooks/image_segmentation_theory.ipynb) — mathematical formulation of thresholding, morphology, region analysis, watershed, evaluation metrics, and limitations.
-- [Implementation](notebooks/image_segmentation.ipynb) — executable workflow; each required task is presented in the same order as the companion notebooks.
+- [Implementation](notebooks/image_segmentation.ipynb) — executable processing pipeline, quantitative results, figures, and validation checks.
 
 ## Outputs
 
