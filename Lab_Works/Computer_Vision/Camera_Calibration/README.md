@@ -7,7 +7,7 @@ The module is organized into four complementary notebooks:
 - [Problem Statement](notebooks/camera_calibration_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/camera_calibration_requirements_gathering_and_approach.ipynb) — engineering requirements, method selection, acceptance criteria, and implementation traceability.
 - [Theory](notebooks/camera_calibration_theory.ipynb) — mathematical formulation, derivations, modeling assumptions, failure modes, and limitations.
-- [Implementation](notebooks/camera_calibration.ipynb) — executable workflow; each required task is immediately followed by its corresponding code.
+- [Implementation](notebooks/camera_calibration.ipynb) — executable calibration pipeline, generated results, diagnostics, and numerical validation.
 
 ## Outputs
 
