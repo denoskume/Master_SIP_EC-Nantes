@@ -7,7 +7,7 @@ The module is organized into four complementary notebooks:
 - [Problem Statement](notebooks/feature_detection_problem_statement.ipynb) — problem definition, fixed tracking configuration, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/feature_detection_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
 - [Theory](notebooks/feature_detection_theory.ipynb) — theoretical foundations of ORB, binary descriptors, Hamming matching, homographies, RANSAC, and tracking diagnostics.
-- [Implementation](notebooks/feature_detection.ipynb) — executable source of truth; every required task is immediately followed by its corresponding code.
+- [Implementation](notebooks/feature_detection.ipynb) — executable experimental pipeline, quantitative results, figures, and validation checks.
 
 ## Outputs
 
