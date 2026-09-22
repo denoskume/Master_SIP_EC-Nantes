@@ -14,10 +14,10 @@ Every notebook-based laboratory or scientific project must use:
 Lab_or_Project_Name/
 ├── data/
 ├── notebooks/
-│   ├── 01_problem_statement.ipynb
-│   ├── 02_theory.ipynb
-│   ├── 03_requirements_gathering_and_approach.ipynb
-│   └── 04_lab_name.ipynb
+│   ├── <lab_name>_problem_statement.ipynb
+│   ├── <lab_name>_theory.ipynb
+│   ├── <lab_name>_requirements_gathering_and_approach.ipynb
+│   └── <lab_name>.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
@@ -30,7 +30,7 @@ Additional folders such as `src/`, `models/`, `reports/`, or `tests/` may be add
 
 ## 2. Notebook Responsibilities
 
-### 01_problem_statement.ipynb
+### <lab_name>_problem_statement.ipynb
 
 Purpose: define the problem before solving it.
 
@@ -49,7 +49,7 @@ Mandatory order:
 
 No implementation code belongs here except tiny illustrative snippets when strictly necessary.
 
-### 02_theory.ipynb
+### <lab_name>_theory.ipynb
 
 Purpose: provide only the theory required to understand the solution.
 
@@ -73,7 +73,7 @@ Rules:
 - theory must support the lab directly;
 - unrelated textbook material must not be added.
 
-### 03_requirements_gathering_and_approach.ipynb
+### <lab_name>_requirements_gathering_and_approach.ipynb
 
 Purpose: translate the problem into an engineering solution design.
 
@@ -96,7 +96,7 @@ Mandatory order:
 
 This notebook answers: **What exactly are we building and why this approach?**
 
-### 04_lab_name.ipynb
+### <lab_name>.ipynb
 
 Purpose: provide the complete reproducible implementation.
 
@@ -195,10 +195,10 @@ Pascal_or_Title_Case_With_Underscores
 Notebook names:
 
 ```text
-01_problem_statement.ipynb
-02_theory.ipynb
-03_requirements_gathering_and_approach.ipynb
-04_<lab_or_project_name>.ipynb
+<lab_name>_problem_statement.ipynb
+<lab_name>_theory.ipynb
+<lab_name>_requirements_gathering_and_approach.ipynb
+<lab_or_project_name>.ipynb
 ```
 
 Generated figures should use ordered, descriptive names:
@@ -298,10 +298,10 @@ Examples:
 
 Information must live in one primary location:
 
-- problem definition → `01_problem_statement.ipynb`;
-- theory and formulas → `02_theory.ipynb`;
-- engineering design → `03_requirements_gathering_and_approach.ipynb`;
-- executable implementation and results → `04_*.ipynb`;
+- problem definition → `<lab_name>_problem_statement.ipynb`;
+- theory and formulas → `<lab_name>_theory.ipynb`;
+- engineering design → `<lab_name>_requirements_gathering_and_approach.ipynb`;
+- executable implementation and results → `<lab_name>.ipynb`;
 - navigation and concise summary → `README.md`.
 
 Do not duplicate long content between these files.
