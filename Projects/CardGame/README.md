@@ -1,4 +1,15 @@
-# CardGame — Rouge Gagne, Noir Perd
+<div style="display:flex; justify-content:space-between; align-items:center; width:100%; margin:8px 0 24px 0;">
+  <div style="text-align:left;">
+    <img src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" style="height:72px; width:auto;">
+  </div>
+  <div style="text-align:right; font-size:18px; font-weight:600; color:#17324d; line-height:1.35;">
+    MSc. CORO DASSIP
+  </div>
+</div>
+
+<div style="border:2px solid #333; padding:14px 20px; margin:15px auto 25px auto; width:85%; max-width:900px; box-sizing:border-box; text-align:center;">
+  <h1 style="margin:0;"><b>CardGame — Rouge Gagne, Noir Perd</b></h1>
+</div>
 
 Interactive card-tracking and betting game developed in Python with Pygame.
 
