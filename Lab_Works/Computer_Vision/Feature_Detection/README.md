@@ -2,7 +2,7 @@
 
 Feature-based object tracking in video using ORB keypoints/descriptors, Hamming-distance matching, RANSAC homography estimation, and perspective transformation of an initial object bounding box.
 
-The module follows the repository's strict four-notebook structure:
+The module is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/feature_detection_problem_statement.ipynb) — problem definition, fixed tracking configuration, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/feature_detection_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
