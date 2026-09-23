@@ -1,47 +1,70 @@
 # Background Subtraction
 
-Neurointerventional background-subtraction project for automatic guidewire and microcatheter enhancement using controlled ablation across background modeling, histogram transformation, spatial and spectral filtering, morphology, segmentation, field-of-view restriction, and quantitative validation.
+Neurointerventional image-processing project for detecting moving guidewires and microcatheters in fluoroscopic sequences using a fixed background reference, histogram transformation, spatial and spectral filtering, morphology, segmentation, and quantitative validation.
 
-The module is organized into four complementary notebooks:
+The project follows the same four-notebook structure used across the repository:
 
-- [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the numbered implementation tasks.
-- [Requirements Gathering & Approach](notebooks/background_subtraction_requirements_gathering_and_approach.ipynb) — engineering requirements, controlled-ablation rules, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/background_subtraction_theory.ipynb) — mathematical and statistical basis of background modeling, filtering, segmentation, EM/GMM comparison, metrics, and limitations.
-- [Implementation](notebooks/Background_Subtraction.ipynb) — executable code and stored outputs only; project context, requirements, approach, and theory remain in their dedicated notebooks.
+- [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — context, inputs, objectives, constraints, and numbered workflow stages.
+- [Requirements Gathering & Approach](notebooks/background_subtraction_requirements_gathering_and_approach.ipynb) — implementation requirements, acceptance criteria, and task-to-code traceability.
+- [Theory](notebooks/background_subtraction_theory.ipynb) — mathematical foundations, assumptions, metrics, and limitations.
+- [Implementation](notebooks/Background_Subtraction.ipynb) — executable code and outputs only.
+
+The number of numbered stages is project-dependent. For the current implementation, the supporting notebooks are synchronized with the **15 executable cells** in the implementation notebook.
+
+## Current Workflow
+
+1. configure the processing environment;
+2. define reusable processing and evaluation functions;
+3. validate frames and annotations;
+4. build the static background reference;
+5. inspect the intermediate processing pipeline;
+6. generate fixed-threshold, Otsu, and EM/GMM masks;
+7. compare segmentation strategies qualitatively;
+8. evaluate every strategy across the sequence;
+9. aggregate metrics and retain the selected strategy;
+10. plot temporal validation curves;
+11. summarize strategy-level performance;
+12. assemble the final retained pipeline;
+13. generate the final guidance gallery;
+14. perform final qualitative validation;
+15. export results and verify deliverables.
 
 ## Outputs
 
-Generated figures are stored in:
+Generated numerical results:
+
+```text
+outputs/background_subtraction_metrics.csv
+outputs/background_subtraction_summary.csv
+```
+
+Generated figures:
 
 ```text
 outputs/figures/
+├── 01_background_reference.png
+├── 02_intermediate_pipeline.png
+├── 03_strategy_comparison_representative.png
+├── 04_temporal_metric_curves.png
+├── 05_strategy_summary.png
+├── 06_final_guidance_gallery.png
+└── 07_final_validation.png
 ```
-
-Current generated figures:
-
-- `01_background_reference.png`
-- `02_intermediate_pipeline.png`
-- `03_strategy_comparison_representative.png`
-- `04_temporal_metric_curves.png`
-- `05_strategy_summary.png`
-- `06_final_guidance_gallery.png`
-- `07_final_validation.png`
 
 ## Run
 
-From the module directory:
+From the project directory:
 
 ```bash
 cd ~/Master_SIP_EC-Nantes/Projects/Background_Subtraction
 
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 code .
 ```
 
-Open [Background_Subtraction.ipynb](notebooks/Background_Subtraction.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
-
-A successful execution runs all 15 code cells without errors and regenerates the two CSV result files plus the seven figures listed above.
+Open [Background_Subtraction.ipynb](notebooks/Background_Subtraction.ipynb), select the project environment as the Jupyter kernel, and execute the implementation notebook from top to bottom when fresh outputs are required.
 
 ## Project Structure
 
@@ -55,30 +78,29 @@ Background_Subtraction/
 │   ├── background_subtraction_theory.ipynb
 │   └── Background_Subtraction.ipynb
 ├── outputs/
-│   └── figures/
+│   ├── figures/
+│   ├── background_subtraction_metrics.csv
+│   └── background_subtraction_summary.csv
 ├── requirements.txt
 └── README.md
 ```
 
-## Scope
+## Implemented Scope
 
-Implemented:
+- fixed static background reference from frame 201;
+- Gaussian spatial smoothing;
+- percentile-based intensity normalization;
+- signed background subtraction;
+- Gaussian high-pass filtering in the Fourier domain;
+- morphological refinement;
+- fixed-threshold, Otsu, and two-component EM/GMM segmentation;
+- sequence-level SAD, MSE, PSNR, Dice, and IoU evaluation;
+- quantitative strategy comparison and retained-strategy selection;
+- temporal metric analysis;
+- guidance overlays and qualitative validation;
+- CSV export and explicit deliverable checks.
 
-- reproduction of the original first-frame background baseline;
-- temporal-median background estimation;
-- fixed background-derived histogram transformation;
-- spatial Gaussian-filter optimization;
-- Gaussian spectral high-pass filtering;
-- controlled morphological refinement;
-- segmentation-threshold optimization;
-- EM/GMM segmentation comparison;
-- field-of-view masking with ground-truth coverage guardrail;
-- final retained-pipeline assembly;
-- SAD, MSE, and PSNR sequence-level evaluation;
-- qualitative masks and guidance overlays;
-- explicit numerical and output validation.
-
-Not included:
+## Out of Scope
 
 - non-rigid registration;
 - optical flow;
@@ -86,8 +108,7 @@ Not included:
 - adaptive online background models;
 - clinical validation or deployment.
 
-## Participants
+## Participant
 
-- **Denos Kume**
-
-**MSc. CORO DASSIP — École Centrale de Nantes**
+**Denos Kume**  
+MSc. CORO DASSIP — École Centrale de Nantes
