@@ -4,7 +4,7 @@ Neurointerventional background-subtraction project for automatic guidewire and m
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
+- [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the numbered implementation tasks.
 - [Requirements Gathering & Approach](notebooks/background_subtraction_requirements_gathering_and_approach.ipynb) — engineering requirements, controlled-ablation rules, acceptance criteria, and implementation traceability.
 - [Theory](notebooks/background_subtraction_theory.ipynb) — mathematical and statistical basis of background modeling, filtering, segmentation, EM/GMM comparison, metrics, and limitations.
 - [Implementation](notebooks/Background_Subtraction.ipynb) — executable code and stored outputs only; project context, requirements, approach, and theory remain in their dedicated notebooks.
@@ -17,32 +17,22 @@ Generated figures are stored in:
 outputs/figures/
 ```
 
-Main outputs:
+Current generated figures:
 
-- `01_representative_data.png`
-- `02_background_models.png`
-- `03_histogram_transformation.png`
-- `04_background_residual.png`
-- `05_spatial_filtering.png`
-- `06_spatial_sigma_sensitivity.png`
-- `07_spectral_filtering.png`
-- `08_segmentation.png`
-- `09_threshold_sensitivity.png`
-- `10_morphological_refinement.png`
-- `11_mask_vs_ground_truth.png`
-- `12_guidance_overlay.png`
-- `13_validation_overlay.png`
-- `14_sad_vs_time.png`
-- `15_mse_vs_time.png`
-- `16_psnr_vs_time.png`
-- `17_overlap_vs_time.png`
+- `01_background_reference.png`
+- `02_intermediate_pipeline.png`
+- `03_strategy_comparison_representative.png`
+- `04_temporal_metric_curves.png`
+- `05_strategy_summary.png`
+- `06_final_guidance_gallery.png`
+- `07_final_validation.png`
 
 ## Run
 
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Project/Background_Subtraction
+cd ~/Master_SIP_EC-Nantes/Projects/Background_Subtraction
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -51,11 +41,7 @@ code .
 
 Open [Background_Subtraction.ipynb](notebooks/Background_Subtraction.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
-A successful execution ends with:
-
-```text
-All Background Subtraction validation checks passed.
-```
+A successful execution runs all 15 code cells without errors and regenerates the two CSV result files plus the seven figures listed above.
 
 ## Project Structure
 
