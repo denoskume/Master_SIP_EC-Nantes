@@ -27,7 +27,7 @@ This repository contains laboratory work and selected projects developed during 
 
 ## Notebook Organization
 
-The laboratory modules use a consistent four-notebook structure:
+The laboratory modules and structured projects use a consistent four-notebook organization where appropriate:
 
 ```text
 Problem Statement
