@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Package Background Subtraction project
+      - name: Package latest Background Subtraction project
         uses: actions/upload-artifact@v4
         with:
           name: background-subtraction-project
