@@ -58,7 +58,6 @@ From the project directory:
 ```bash
 cd ~/Master_SIP_EC-Nantes/Projects/Background_Subtraction
 
-python -m venv .venv
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
