@@ -7,7 +7,7 @@ The module is organized into four complementary notebooks:
 - [Problem Statement](notebooks/background_subtraction_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
 - [Requirements Gathering & Approach](notebooks/background_subtraction_requirements_gathering_and_approach.ipynb) — engineering requirements, controlled-ablation rules, acceptance criteria, and implementation traceability.
 - [Theory](notebooks/background_subtraction_theory.ipynb) — mathematical and statistical basis of background modeling, filtering, segmentation, EM/GMM comparison, metrics, and limitations.
-- [Implementation](notebooks/background_subtraction.ipynb) — reproducible baseline, controlled ablation study, retained pipeline, metrics, and validation outputs.
+- [Implementation](notebooks/Background_Subtraction.ipynb) — executable code and stored outputs only; project context, requirements, approach, and theory remain in their dedicated notebooks.
 
 ## Outputs
 
@@ -49,7 +49,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [background_subtraction.ipynb](notebooks/background_subtraction.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [Background_Subtraction.ipynb](notebooks/Background_Subtraction.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -67,7 +67,7 @@ Background_Subtraction/
 │   ├── background_subtraction_problem_statement.ipynb
 │   ├── background_subtraction_requirements_gathering_and_approach.ipynb
 │   ├── background_subtraction_theory.ipynb
-│   └── background_subtraction.ipynb
+│   └── Background_Subtraction.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
