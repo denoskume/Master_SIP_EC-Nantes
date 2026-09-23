@@ -19,7 +19,7 @@ This repository contains laboratory work and selected projects developed during 
 | **Image Processing** | [Spatial-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Spatial_Domain) | convolution, smoothing, sharpening, derivatives |
 | **Image Processing** | [Frequency-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Frequency_Domain) | FFT, spectral analysis, Butterworth/Gaussian/Ideal filtering, notch filtering |
 | **Image Processing** | [Image Segmentation](Lab_Works/Image_Processing/Image_Segmentation) | thresholding, morphology, connected components, watershed, metrics |
-| **Medical Imaging** | [Background Subtraction](Projects/Background_Subtraction) | temporal background modeling, filtering, segmentation, ablation, validation |
+| **Medical Imaging** | [Background Subtraction](Projects/Background_Subtraction) | static background subtraction, spatial/spectral filtering, morphology, segmentation, sequence validation |
 | **Multimodal ML** | [CLAP Audio Classification](Projects/Prompt_Engineering_Audio_Classification) | zero-shot audio classification, prompt engineering, audio-text embeddings |
 | **Software Project** | [CardGame](Projects/CardGame) | Python application, game logic, interface, assets |
 
