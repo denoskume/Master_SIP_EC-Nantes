@@ -19,7 +19,7 @@ This repository contains laboratory work and selected projects developed during 
 | **Image Processing** | [Spatial-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Spatial_Domain) | convolution, smoothing, sharpening, derivatives |
 | **Image Processing** | [Frequency-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Frequency_Domain) | FFT, spectral analysis, Butterworth/Gaussian/Ideal filtering, notch filtering |
 | **Image Processing** | [Image Segmentation](Lab_Works/Image_Processing/Image_Segmentation) | thresholding, morphology, connected components, watershed, metrics |
-| **Medical Imaging** | [Background Subtraction](Lab_Works/Image_Processing/Project/Background_Subtraction) | temporal background modeling, filtering, segmentation, ablation, validation |
+| **Medical Imaging** | [Background Subtraction](Projects/Background_Subtraction) | temporal background modeling, filtering, segmentation, ablation, validation |
 | **Multimodal ML** | [CLAP Audio Classification](Projects/Prompt_Engineering_Audio_Classification) | zero-shot audio classification, prompt engineering, audio-text embeddings |
 | **Software Project** | [CardGame](Projects/CardGame) | Python application, game logic, interface, assets |
 
@@ -63,11 +63,10 @@ Master_SIP_EC-Nantes/
 │       ├── Image_Transformation/
 │       ├── Filtering_in_Spatial_Domain/
 │       ├── Filtering_in_Frequency_Domain/
-│       ├── Image_Segmentation/
-│       └── Project/
-│           └── Background_Subtraction/
+│       └── Image_Segmentation/
 │
 └── Projects/
+    ├── Background_Subtraction/
     ├── Prompt_Engineering_Audio_Classification/
     └── CardGame/
 ```
