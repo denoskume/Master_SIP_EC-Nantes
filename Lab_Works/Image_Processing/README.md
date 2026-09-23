@@ -1,13 +1,6 @@
 # Image Processing
 
-Image-processing laboratory portfolio organized under the repository-wide **Camera Calibration reference standard**.
-
-```text
-Canonical reference:
-Lab_Works/Computer_Vision/Camera_Calibration/
-```
-
-The subject matter and number of tasks vary by module. The structural roles, notebook traceability, README order, reproducibility rules, and validation discipline do not.
+Academic laboratory work in image processing developed within the MSc. CORO DASSIP programme at École Centrale de Nantes.
 
 ## Laboratory Modules
 
@@ -19,9 +12,23 @@ The subject matter and number of tasks vary by module. The structural roles, not
 
 The related **Background Subtraction** project is maintained separately under [`Projects/Background_Subtraction`](../../Projects/Background_Subtraction).
 
-## Mandatory Module Structure
+## Notebook Organization
 
-Every scientific module follows the Camera Calibration backbone:
+Each module separates the work into complementary notebooks:
+
+```text
+Problem Statement
+        ↓
+Requirements Gathering & Approach
+        ↓
+Theory
+        ↓
+Implementation
+```
+
+The scope and number of numbered stages depend on the subject of each module.
+
+## Module Structure
 
 ```text
 Module_Name/
@@ -37,31 +44,12 @@ Module_Name/
 └── README.md
 ```
 
-The four notebooks use the same numbered task sequence inside a module:
+## Reproducibility
 
-```text
-Problem Statement
-        ↓
-Requirements Gathering & Approach
-        ↓
-Theory
-        ↓
-Implementation
-```
-
-The number of tasks is determined by the problem itself. It is **not** required to match Camera Calibration's task count.
-
-## Execution Policy
-
-- repository-relative paths only;
-- dedicated local `.venv` per module;
-- dependencies explicitly pinned in `requirements.txt`;
+- repository-relative data and output paths;
+- dedicated Python environment per module;
+- explicit dependencies in `requirements.txt`;
 - top-to-bottom notebook execution;
 - generated figures stored under `outputs/figures/`;
 - quantitative and visual validation where applicable;
-- explicit final validation checks;
-- no module is considered complete unless its four notebooks remain task-aligned.
-
-## Reference Rule
-
-When a structural question is ambiguous, **Camera Calibration wins**. Other modules are not templates for one another.
+- final numerical and output checks in the implementation notebook.
