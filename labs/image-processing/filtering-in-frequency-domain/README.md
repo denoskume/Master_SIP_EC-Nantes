@@ -56,7 +56,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Filtering_in_Frequency_Domain
+cd ~/msc-coro-dassip-portfolio/labs/image-processing/filtering-in-frequency-domain
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -74,7 +74,7 @@ All frequency-domain validation checks passed.
 ## Project Structure
 
 ```text
-Filtering_in_Frequency_Domain/
+filtering-in-frequency-domain/
 ├── data/
 ├── notebooks/
 │   ├── filtering_in_frequency_domain_problem_statement.ipynb
