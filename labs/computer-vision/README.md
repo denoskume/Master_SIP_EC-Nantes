@@ -6,19 +6,21 @@
 
 <h1 align="center">Computer Vision</h1>
 
-Academic laboratory work in computer vision and deep learning developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
+Laboratory work in **computer vision and deep learning** developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
 
-## Laboratory Modules
+The modules focus on reproducible implementation, quantitative validation, and technical interpretation rather than isolated code exercises.
 
-| Module | Scope |
+## Current Modules
+
+| Module | Technical scope |
 | --- | --- |
-| [Camera Calibration](camera-calibration) | normalized DLT, Zhang calibration, intrinsic/extrinsic estimation, reprojection analysis |
-| [Feature Detection & Tracking](feature-tracking) | ORB, Hamming matching, BFMatcher, RANSAC homography, fixed-reference object tracking |
-| [Deep Learning](deep-learning) | PyTorch MLP classification on MNIST, model-capacity comparison, confidence analysis |
+| [Camera Calibration](camera-calibration) | normalized DLT, Zhang calibration, SVD, intrinsic/extrinsic estimation, camera poses, reprojection error |
+| [Feature Detection & Tracking](feature-tracking) | ORB, binary descriptors, Hamming matching, BFMatcher, RANSAC, homography, fixed-reference object tracking |
+| [Deep Learning](deep-learning) | PyTorch MLP on MNIST, BatchNorm, ReLU, Cross-Entropy, Adam, hidden-size comparison, confidence analysis |
 
-## Notebook Organization
+## Common Notebook Structure
 
-Each module follows the same separation where appropriate:
+Each module follows the same four-part engineering workflow where appropriate:
 
 ```text
 Problem Statement
@@ -30,31 +32,47 @@ Theory
 Implementation
 ```
 
-The implementation notebook remains code-focused: concise execution headings, executable cells, outputs, metrics, diagnostics, and validation. Mathematical explanations, assumptions, limitations, and interpretation remain in the supporting notebooks.
+- **Problem Statement** — context, inputs, objectives, constraints, and expected deliverables.
+- **Requirements Gathering & Approach** — implementation requirements, method choices, acceptance criteria, and task traceability.
+- **Theory** — mathematical foundations, assumptions, failure modes, and limitations.
+- **Implementation** — executable code, outputs, metrics, diagnostics, and validation.
 
-## Standard Module Structure
+## Engineering Standard
+
+Across the modules:
+
+- paths are repository-relative;
+- dependencies are declared in each module's `requirements.txt`;
+- implementation notebooks execute top-to-bottom;
+- generated evidence is stored under `outputs/`;
+- numerical results are paired with visual diagnostics;
+- final cells include explicit validation and consistency checks.
+
+## Directory Structure
 
 ```text
-module/
+computer-vision/
 ├── README.md
-├── data/
-├── notebooks/
-│   ├── problem_statement.ipynb
-│   ├── requirements.ipynb
-│   ├── theory.ipynb
-│   └── main.ipynb
-├── outputs/
-│   └── figures/
-└── requirements.txt
+├── camera-calibration/
+│   ├── README.md
+│   ├── data/
+│   ├── notebooks/
+│   ├── outputs/
+│   └── requirements.txt
+├── deep-learning/
+│   ├── README.md
+│   ├── data/
+│   ├── notebooks/
+│   ├── outputs/
+│   └── requirements.txt
+└── feature-tracking/
+    ├── README.md
+    ├── data/
+    ├── notebooks/
+    ├── outputs/
+    └── requirements.txt
 ```
 
-## Reproducibility
-
-- repository-relative data and output paths;
-- explicit dependencies in `requirements.txt`;
-- top-to-bottom notebook execution;
-- generated evidence stored under `outputs/`;
-- quantitative and visual validation;
-- final numerical and output checks in implementation notebooks.
+---
 
 [← Portfolio home](../../README.md)
