@@ -7,17 +7,17 @@
 <table width="85%" align="center">
   <tr>
     <td align="center">
-      <h1>Image Processing Fundamental</h1>
+      <h1>Image Processing Fundamentals</h1>
     </td>
   </tr>
 </table>
 
 Digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical and numerical foundations for image representation, statistics, noise models, metrics, and failure analysis.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -68,7 +68,7 @@ A successful execution ends with:
 All fundamental validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
 image-processing-fundamentals/
