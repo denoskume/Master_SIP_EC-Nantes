@@ -6,23 +6,23 @@
 
 <h1 align="center">Image Processing</h1>
 
-Academic laboratory work in image processing developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
+Laboratory work in **digital image processing** developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
 
-## Laboratory Modules
+The modules progress from image representation and transformations to spatial/frequency filtering and segmentation, with reproducible code, controlled experiments, and quantitative validation.
 
-| Module | Scope |
+## Current Modules
+
+| Module | Technical scope |
 | --- | --- |
-| [Image Processing Fundamentals](image-processing-fundamentals) | image formation, sampling, quantization, pixels, channels, statistics, histograms, noise, image comparison |
-| [Image Transformation](image-transformation) | intensity and geometric transformations, interpolation, affine mapping |
-| [Spatial-Domain Filtering](filtering-in-spatial-domain) | convolution, smoothing, denoising, sharpening, Sobel, Prewitt, Scharr |
-| [Frequency-Domain Filtering](filtering-in-frequency-domain) | Fourier analysis, classical frequency filters, periodic-noise removal, moiré suppression, illumination correction |
-| [Image Segmentation](segmentation) | thresholding, morphology, connected components, color segmentation, watershed, segmentation metrics |
+| [Image Processing Fundamentals](image-processing-fundamentals) | image representation, sampling, quantization, pixels, channels, statistics, histograms, noise, image comparison |
+| [Image Transformation](image-transformation) | pointwise intensity mappings, homogeneous coordinates, interpolation, affine geometry, inverse mapping, transformation composition |
+| [Spatial-Domain Filtering](filtering-in-spatial-domain) | convolution, border handling, smoothing, denoising, sharpening, Sobel, Prewitt, Scharr, RGB filtering |
+| [Frequency-Domain Filtering](filtering-in-frequency-domain) | 2-D FFT, magnitude/phase analysis, Ideal/Gaussian/Butterworth filters, notch filtering, moiré suppression, illumination correction |
+| [Image Segmentation](segmentation) | thresholding, morphology, connected components, contours, HSV segmentation, watershed, pixel accuracy, precision, recall, IoU, Dice |
 
-The related larger project is maintained independently: [Background Subtraction — Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy).
+## Common Notebook Structure
 
-## Notebook Organization
-
-Each module separates the work into complementary notebooks:
+Each module follows the same four-part engineering workflow:
 
 ```text
 Problem Statement
@@ -34,31 +34,43 @@ Theory
 Implementation
 ```
 
-The implementation notebook remains code-focused. Theory, method-selection criteria, assumptions, limitations, and interpretation belong in the supporting notebooks.
+- **Problem Statement** — context, inputs, objectives, constraints, and expected deliverables.
+- **Requirements Gathering & Approach** — implementation requirements, selected methods, acceptance criteria, and task traceability.
+- **Theory** — mathematical foundations, assumptions, method behavior, and limitations.
+- **Implementation** — executable code, generated figures, quantitative results, diagnostics, and validation.
 
-## Standard Module Structure
+## Engineering Standard
+
+Across the modules:
+
+- paths are repository-relative;
+- dependencies are explicit in `requirements.txt`;
+- notebooks execute top-to-bottom in a dedicated environment;
+- parameter studies are used where method behavior depends on tuning;
+- generated figures are stored under `outputs/figures/`;
+- quantitative metrics and visual evidence are used together;
+- final outputs are checked explicitly for reproducibility.
+
+## Directory Structure
 
 ```text
-module/
+image-processing/
 ├── README.md
-├── data/
-├── notebooks/
-│   ├── problem_statement.ipynb
-│   ├── requirements.ipynb
-│   ├── theory.ipynb
-│   └── main.ipynb
-├── outputs/
-│   └── figures/
-└── requirements.txt
+├── image-processing-fundamentals/
+├── image-transformation/
+├── filtering-in-spatial-domain/
+├── filtering-in-frequency-domain/
+└── segmentation/
 ```
 
-## Reproducibility
+Each module contains its own documentation, data, notebooks, outputs, and dependency specification where applicable.
 
-- repository-relative data and output paths;
-- dedicated Python environment per module;
-- explicit dependencies in `requirements.txt`;
-- top-to-bottom notebook execution;
-- generated evidence stored under `outputs/`;
-- quantitative and visual validation where applicable.
+## Related Standalone Project
+
+The larger medical-image-processing project has been moved to its own repository:
+
+[**Background Subtraction — Fluoroscopy →**](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
+
+---
 
 [← Portfolio home](../../README.md)
