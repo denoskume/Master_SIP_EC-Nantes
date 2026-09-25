@@ -43,7 +43,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Computer_Vision/Camera_Calibration
+cd ~/msc-coro-dassip-portfolio/labs/computer-vision/camera-calibration
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -61,7 +61,7 @@ All Camera Calibration validation checks passed.
 ## Project Structure
 
 ```text
-Camera_Calibration/
+camera-calibration/
 ├── data/
 │   └── calibration_images/
 ├── notebooks/
