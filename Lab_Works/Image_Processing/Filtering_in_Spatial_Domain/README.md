@@ -1,4 +1,16 @@
-# Filtering in Spatial Domain
+<p>
+  <img align="left" src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" height="64">
+</p>
+<p align="right"><strong>MSc. CORO DASSIP</strong></p>
+<br clear="both">
+
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>Filtering in Spatial Domain</h1>
+    </td>
+  </tr>
+</table>
 
 Neighborhood-based image-filtering laboratory covering convolution, border handling, smoothing, denoising, sharpening, derivative operators, RGB filtering, quantitative comparison, and validation.
 
