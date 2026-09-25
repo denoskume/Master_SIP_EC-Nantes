@@ -99,3 +99,7 @@ Not included:
 - **Oluwole SHOKUNBI**
 
 **MSc. CORO DASSIP — École Centrale de Nantes**
+
+---
+
+[← Computer Vision labs](../README.md) · [Portfolio home](../../../README.md)
