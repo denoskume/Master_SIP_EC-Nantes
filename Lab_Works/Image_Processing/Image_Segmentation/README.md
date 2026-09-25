@@ -1,4 +1,16 @@
-# Image Segmentation
+<p>
+  <img align="left" src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" height="64">
+</p>
+<p align="right"><strong>MSc. CORO DASSIP</strong></p>
+<br clear="both">
+
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>Image Segmentation</h1>
+    </td>
+  </tr>
+</table>
 
 Classical image-segmentation laboratory covering thresholding, morphology, connected components, contours, color segmentation, watershed, segmentation metrics, and end-to-end mask generation.
 
