@@ -3,7 +3,7 @@
 **Academic engineering portfolio in Data Science, Signal & Image Processing**  
 Computer Vision • Image Processing • Deep Learning • Multimodal Machine Learning
 
-This repository contains laboratory work and selected projects developed during the **Master CORO / DASSIP at École Centrale de Nantes**. The emphasis is on reproducible implementations, quantitative validation, technical interpretation, and clean engineering documentation.
+This repository contains laboratory work developed during the **Master CORO / DASSIP at École Centrale de Nantes**. The emphasis is on reproducible implementations, quantitative validation, technical interpretation, and clean engineering documentation.
 
 ---
 
@@ -19,15 +19,20 @@ This repository contains laboratory work and selected projects developed during 
 | **Image Processing** | [Spatial-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Spatial_Domain) | convolution, smoothing, sharpening, derivatives |
 | **Image Processing** | [Frequency-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Frequency_Domain) | FFT, spectral analysis, Butterworth/Gaussian/Ideal filtering, notch filtering |
 | **Image Processing** | [Image Segmentation](Lab_Works/Image_Processing/Image_Segmentation) | thresholding, morphology, connected components, watershed, metrics |
-| **Medical Imaging** | [Background Subtraction](Projects/Background_Subtraction) | static background subtraction, spatial/spectral filtering, morphology, segmentation, sequence validation |
-| **Multimodal ML** | [CLAP Audio Classification](Projects/Prompt_Engineering_Audio_Classification) | zero-shot audio classification, prompt engineering, audio-text embeddings |
-| **Software Project** | [CardGame](Projects/CardGame) | Python application, game logic, interface, assets |
+
+### Standalone Projects
+
+| Area | Project | Main topics |
+| --- | --- | --- |
+| **Medical Imaging** | [Background Subtraction](https://github.com/denoskume/Background-Subtraction-Fluoroscopy) | static background subtraction, spatial/spectral filtering, morphology, segmentation, sequence validation |
+| **Multimodal ML** | [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification) | zero-shot audio classification, prompt engineering, audio-text embeddings |
+| **Python Engineering** | [Python CardGame](https://github.com/denoskume/Python-CardGame) | Python modules, finite-state machine, event-driven logic, JSON persistence, Pygame |
 
 ---
 
 ## Notebook Organization
 
-The laboratory modules and structured projects use a consistent four-notebook organization where appropriate:
+The laboratory modules use a consistent four-notebook organization where appropriate:
 
 ```text
 Problem Statement
@@ -52,23 +57,18 @@ Generated results are stored in each module's `outputs/` directory.
 
 ```text
 Master_SIP_EC-Nantes/
-├── Lab_Works/
-│   ├── Computer_Vision/
-│   │   ├── Camera_Calibration/
-│   │   ├── Feature_Detection/
-│   │   └── Deep_Learning/
-│   │
-│   └── Image_Processing/
-│       ├── Image_Processing_Fundamental/
-│       ├── Image_Transformation/
-│       ├── Filtering_in_Spatial_Domain/
-│       ├── Filtering_in_Frequency_Domain/
-│       └── Image_Segmentation/
-│
-└── Projects/
-    ├── Background_Subtraction/
-    ├── Prompt_Engineering_Audio_Classification/
-    └── CardGame/
+└── Lab_Works/
+    ├── Computer_Vision/
+    │   ├── Camera_Calibration/
+    │   ├── Feature_Detection/
+    │   └── Deep_Learning/
+    │
+    └── Image_Processing/
+        ├── Image_Processing_Fundamental/
+        ├── Image_Transformation/
+        ├── Filtering_in_Spatial_Domain/
+        ├── Filtering_in_Frequency_Domain/
+        └── Image_Segmentation/
 ```
 
 ---
@@ -79,7 +79,7 @@ Master_SIP_EC-Nantes/
 - clear separation of data, notebooks, and generated outputs;
 - quantitative and visual validation;
 - controlled experiments and parameter studies;
-- project-specific README files;
+- structured technical documentation;
 - committed figures and notebook outputs where useful for review.
 
 ---
@@ -94,6 +94,6 @@ Master_SIP_EC-Nantes/
 
 **Programme:** Master CORO — Data Science, Signal & Image Processing (DASSIP)  
 **Institution:** École Centrale de Nantes  
-**Repository scope:** academic laboratories, engineering exercises, and selected personal/project work
+**Repository scope:** academic laboratory work and engineering exercises
 
 [GitHub profile →](https://github.com/denoskume)
