@@ -60,7 +60,6 @@ Generated results are stored inside each module's `outputs/` directory when appl
 
 ```text
 msc-coro-dassip-portfolio/
-├── .github/
 ├── labs/
 │   ├── computer-vision/
 │   │   ├── README.md
