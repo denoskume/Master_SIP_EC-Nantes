@@ -4,7 +4,13 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-# Computer Vision
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>Computer Vision</h1>
+    </td>
+  </tr>
+</table>
 
 Academic laboratory work in computer vision and deep learning developed within the MSc. CORO DASSIP programme at École Centrale de Nantes.
 
