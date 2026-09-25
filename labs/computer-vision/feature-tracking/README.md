@@ -14,10 +14,10 @@
 
 Feature-based object tracking in video using ORB keypoints/descriptors, Hamming-distance matching, RANSAC homography estimation, and perspective transformation of an initial object bounding box.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, fixed tracking configuration, expected outputs, and the 13 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — theoretical foundations of ORB, binary descriptors, Hamming matching, homographies, RANSAC, and tracking diagnostics.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -57,7 +57,7 @@ A successful execution ends with:
 All Feature Detection validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
 feature-tracking/
