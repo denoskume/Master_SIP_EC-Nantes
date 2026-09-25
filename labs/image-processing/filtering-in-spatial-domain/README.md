@@ -55,7 +55,7 @@ Main outputs include:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Filtering_in_Spatial_Domain
+cd ~/msc-coro-dassip-portfolio/labs/image-processing/filtering-in-spatial-domain
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -73,7 +73,7 @@ All spatial-filtering validation checks passed.
 ## Project Structure
 
 ```text
-Filtering_in_Spatial_Domain/
+filtering-in-spatial-domain/
 ├── data/
 ├── notebooks/
 │   ├── filtering_in_spatial_domain_problem_statement.ipynb
