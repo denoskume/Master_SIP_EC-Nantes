@@ -71,6 +71,12 @@ computer-vision/
     └── requirements.txt
 ```
 
+## Related Standalone Project
+
+The larger fluoroscopy project is maintained separately so it can be reviewed as a complete computer-vision and image-processing workflow:
+
+[**Background Subtraction — Fluoroscopy →**](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
+
 ---
 
 [← Portfolio home](../../README.md)
