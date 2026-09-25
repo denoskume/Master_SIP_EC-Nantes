@@ -12,12 +12,12 @@
   </tr>
 </table>
 
-image-transformation laboratory covering pointwise intensity mappings, homogeneous-coordinate geometry, inverse mapping, interpolation, transformation composition, and affine image warping.
+Image transformation laboratory covering pointwise intensity mappings, homogeneous-coordinate geometry, inverse mapping, interpolation, transformation composition, and affine image warping.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 25 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical formulation of intensity mappings, homogeneous coordinates, interpolation, affine geometry, and model limitations.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -70,10 +70,10 @@ A successful execution ends with:
 All image-transformation validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
-Image_Transformation/
+image-transformation/
 ├── data/
 ├── notebooks/
 │   ├── problem_statement.ipynb
