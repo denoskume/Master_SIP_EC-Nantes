@@ -55,7 +55,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Image_Transformation
+cd ~/msc-coro-dassip-portfolio/labs/image-processing/image-transformation
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
