@@ -14,10 +14,10 @@
 
 Handwritten-digit classification with a one-hidden-layer MLP in PyTorch, comparing hidden sizes of 128, 256, and 512 neurons on MNIST.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, fixed experiment settings, expected outputs, and the 13 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical formulation of the MLP, optimization objective, controlled model-capacity comparison, and confidence analysis.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -58,7 +58,7 @@ A successful execution ends with:
 All Deep Learning validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
 deep-learning/
