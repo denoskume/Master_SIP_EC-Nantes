@@ -16,10 +16,10 @@ Handwritten-digit classification with a one-hidden-layer MLP in PyTorch, compari
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/deep_learning_problem_statement.ipynb) — problem definition, fixed experiment settings, expected outputs, and the 13 required tasks.
-- [Requirements Gathering & Approach](notebooks/deep_learning_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
-- [Theory](notebooks/deep_learning_theory.ipynb) — mathematical formulation of the MLP, optimization objective, controlled model-capacity comparison, and confidence analysis.
-- [Implementation](notebooks/deep_learning.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, fixed experiment settings, expected outputs, and the 13 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
+- [Theory](notebooks/theory.ipynb) — mathematical formulation of the MLP, optimization objective, controlled model-capacity comparison, and confidence analysis.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -50,7 +50,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [deep_learning.ipynb](notebooks/deep_learning.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -64,10 +64,10 @@ All Deep Learning validation checks passed.
 deep-learning/
 ├── data/
 ├── notebooks/
-│   ├── deep_learning_problem_statement.ipynb
-│   ├── deep_learning_requirements_gathering_and_approach.ipynb
-│   ├── deep_learning_theory.ipynb
-│   └── deep_learning.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
