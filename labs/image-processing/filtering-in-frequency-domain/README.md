@@ -16,10 +16,10 @@ Fourier-domain image-processing laboratory covering spatial frequency, 2-D FFT a
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/filtering_in_frequency_domain_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 26 required tasks.
-- [Requirements Gathering & Approach](notebooks/filtering_in_frequency_domain_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/filtering_in_frequency_domain_theory.ipynb) — Fourier-domain formulation, transfer functions, spectral diagnostics, periodic interference analysis, and limitations.
-- [Implementation](notebooks/filtering_in_frequency_domain.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 26 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Theory](notebooks/theory.ipynb) — Fourier-domain formulation, transfer functions, spectral diagnostics, periodic interference analysis, and limitations.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -63,7 +63,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [filtering_in_frequency_domain.ipynb](notebooks/filtering_in_frequency_domain.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -77,10 +77,10 @@ All frequency-domain validation checks passed.
 filtering-in-frequency-domain/
 ├── data/
 ├── notebooks/
-│   ├── filtering_in_frequency_domain_problem_statement.ipynb
-│   ├── filtering_in_frequency_domain_requirements_gathering_and_approach.ipynb
-│   ├── filtering_in_frequency_domain_theory.ipynb
-│   └── filtering_in_frequency_domain.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
