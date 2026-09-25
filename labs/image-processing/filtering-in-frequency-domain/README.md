@@ -14,10 +14,10 @@
 
 Fourier-domain image-processing laboratory covering spatial frequency, 2-D FFT analysis, magnitude and phase, classical frequency filters, periodic-noise suppression, moiré removal, illumination correction, and validation.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 26 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — Fourier-domain formulation, transfer functions, spectral diagnostics, periodic interference analysis, and limitations.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -37,12 +37,14 @@ Main outputs:
 - `04_orientation_spectra.png`
 - `05_dataset_spectra.png`
 - `06_reconstruction.png`
+- `07_frequency_filter_pipeline.png`
 - `07_phase_magnitude_swap.png`
 - `08_phase_only_magnitude_only.png`
 - `09_lpf_comparison.png`
 - `10_butterworth_orders.png`
 - `11_ringing.png`
 - `12_high_pass.png`
+- `13_convolution_validation.png`
 - `13_high_boost.png`
 - `14_band_filters.png`
 - `15_periodic_noise_spectra.png`
@@ -50,6 +52,10 @@ Main outputs:
 - `17_moire_removal.png`
 - `18_shading_correction.png`
 - `19_cutoff_sensitivity.png`
+- `20_failure_diagnostics.png`
+- `21_parameter_sensitivity.png`
+- `22_method_selection.png`
+- `23_integrated_workflow.png`
 
 ## Run
 
@@ -71,7 +77,7 @@ A successful execution ends with:
 All frequency-domain validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
 filtering-in-frequency-domain/
