@@ -53,7 +53,7 @@ Main outputs include:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Image_Processing_Fundamental
+cd ~/msc-coro-dassip-portfolio/labs/image-processing/image-processing-fundamentals
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -71,7 +71,7 @@ All fundamental validation checks passed.
 ## Project Structure
 
 ```text
-Image_Processing_Fundamental/
+image-processing-fundamentals/
 ├── data/
 ├── notebooks/
 │   ├── image_processing_fundamental_problem_statement.ipynb
