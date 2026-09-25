@@ -16,10 +16,10 @@ Classical image-segmentation laboratory covering thresholding, morphology, conne
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/image_segmentation_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 28 required tasks.
-- [Requirements Gathering & Approach](notebooks/image_segmentation_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/image_segmentation_theory.ipynb) — mathematical formulation of thresholding, morphology, region analysis, watershed, evaluation metrics, and limitations.
-- [Implementation](notebooks/image_segmentation.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 28 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Theory](notebooks/theory.ipynb) — mathematical formulation of thresholding, morphology, region analysis, watershed, evaluation metrics, and limitations.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -65,7 +65,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [image_segmentation.ipynb](notebooks/image_segmentation.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -79,10 +79,10 @@ All image-segmentation validation checks passed.
 Image_Segmentation/
 ├── data/
 ├── notebooks/
-│   ├── image_segmentation_problem_statement.ipynb
-│   ├── image_segmentation_requirements_gathering_and_approach.ipynb
-│   ├── image_segmentation_theory.ipynb
-│   └── image_segmentation.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
