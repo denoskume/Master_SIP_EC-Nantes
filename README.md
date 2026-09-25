@@ -35,24 +35,22 @@ This repository contains laboratory work developed within the **MSc CORO DASSIP 
 
 ## Notebook Standard
 
-Laboratory modules use a consistent four-part organization where appropriate:
+Each laboratory module follows the same notebook-first structure:
 
 ```text
-Problem Statement
-      ↓
-Requirements Gathering & Approach
-      ↓
-Theory
-      ↓
-Implementation
+notebooks/
+├── theory.ipynb
+├── problem_statement.ipynb
+├── requirements.ipynb
+└── main.ipynb
 ```
 
-- **Problem Statement** — context, objectives, constraints, and expected deliverables.
-- **Requirements Gathering & Approach** — implementation requirements, workflow, and acceptance criteria.
-- **Theory** — mathematical foundations, assumptions, and limitations.
-- **Implementation** — executable code, outputs, metrics, diagnostics, and validation.
+- **Theory** — concepts, formulas, assumptions, method behavior, and references.
+- **Problem Statement** — context, learning objectives, tasks, input data, and expected deliverables.
+- **Requirements** — Python environment, required packages, input-data checks, and execution prerequisites.
+- **Implementation** — executable workflow, generated figures, quantitative results, discussion, and validation.
 
-Generated results are stored inside each module's `outputs/` directory when applicable.
+Each lab keeps its own `data/`, `notebooks/`, `outputs/`, `README.md`, and `requirements.txt`.
 
 ---
 
@@ -90,13 +88,14 @@ Larger projects are maintained independently so each can be reviewed as a comple
 
 ---
 
-## Engineering Practices
+## Lab Standard
 
-- reproducible Python environments and explicit dependencies;
-- clear separation of problem definition, requirements, theory, implementation, data, and outputs;
-- quantitative and visual validation;
-- controlled experiments and parameter studies;
-- concise technical documentation and reproducible results.
+- notebook-based implementation rather than a software-package layout;
+- explicit dependencies in each lab's `requirements.txt`;
+- repository-relative paths and reproducible execution;
+- separate theory, problem statement, requirements, and implementation notebooks;
+- generated figures and results stored under `outputs/`;
+- quantitative and visual validation where relevant.
 
 ---
 
