@@ -42,7 +42,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Computer_Vision/Feature_Detection
+cd ~/msc-coro-dassip-portfolio/labs/computer-vision/feature-tracking
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -60,7 +60,7 @@ All Feature Detection validation checks passed.
 ## Project Structure
 
 ```text
-Feature_Detection/
+feature-tracking/
 ├── data/
 │   └── video1.mp4
 ├── notebooks/
