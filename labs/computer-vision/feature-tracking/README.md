@@ -16,10 +16,10 @@ Feature-based object tracking in video using ORB keypoints/descriptors, Hamming-
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/feature_detection_problem_statement.ipynb) — problem definition, fixed tracking configuration, expected outputs, and the 13 required tasks.
-- [Requirements Gathering & Approach](notebooks/feature_detection_requirements_gathering_and_approach.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
-- [Theory](notebooks/feature_detection_theory.ipynb) — theoretical foundations of ORB, binary descriptors, Hamming matching, homographies, RANSAC, and tracking diagnostics.
-- [Implementation](notebooks/feature_detection.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, fixed tracking configuration, expected outputs, and the 13 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, method choices, acceptance criteria, and task-to-code traceability.
+- [Theory](notebooks/theory.ipynb) — theoretical foundations of ORB, binary descriptors, Hamming matching, homographies, RANSAC, and tracking diagnostics.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -49,7 +49,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [feature_detection.ipynb](notebooks/feature_detection.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -64,10 +64,10 @@ feature-tracking/
 ├── data/
 │   └── video1.mp4
 ├── notebooks/
-│   ├── feature_detection_problem_statement.ipynb
-│   ├── feature_detection_requirements_gathering_and_approach.ipynb
-│   ├── feature_detection_theory.ipynb
-│   └── feature_detection.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
