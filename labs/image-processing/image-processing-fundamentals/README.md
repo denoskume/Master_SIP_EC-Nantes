@@ -113,3 +113,7 @@ Not included:
 - **Denos Kume**
 
 **MSc. CORO DASSIP — École Centrale de Nantes**
+
+---
+
+[← Image Processing labs](../README.md) · [Portfolio home](../../../README.md)
