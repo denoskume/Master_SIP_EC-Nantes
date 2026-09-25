@@ -22,7 +22,7 @@ Academic laboratory work in image processing developed within the MSc. CORO DASS
 4. **Filtering_in_Frequency_Domain** — Fourier analysis, classical frequency filters, periodic-noise removal, moiré suppression, and illumination correction.
 5. **Image_Segmentation** — thresholding, morphology, connected components, color segmentation, watershed, and segmentation metrics.
 
-The related **Background Subtraction** project is maintained separately under [`Projects/Background_Subtraction`](../../Projects/Background_Subtraction).
+The related **Background Subtraction** project is maintained as a standalone repository: [Background-Subtraction-Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy).
 
 ## Notebook Organization
 
@@ -39,6 +39,8 @@ Implementation
 ```
 
 The scope and number of numbered stages depend on the subject of each module.
+
+The implementation notebook is intentionally code-focused: concise execution headings, executable cells, outputs, metrics, and validation only. Mathematical explanations, interpretation guidance, method-selection criteria, assumptions, and limitations belong in the dedicated Theory and Requirements & Approach notebooks.
 
 ## Module Structure
 
