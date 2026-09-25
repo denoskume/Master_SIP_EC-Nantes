@@ -19,7 +19,7 @@ The module is organized into four complementary notebooks:
 - [Problem Statement](notebooks/filtering_in_frequency_domain_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 26 required tasks.
 - [Requirements Gathering & Approach](notebooks/filtering_in_frequency_domain_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
 - [Theory](notebooks/filtering_in_frequency_domain_theory.ipynb) — Fourier-domain formulation, transfer functions, spectral diagnostics, periodic interference analysis, and limitations.
-- [Implementation](notebooks/filtering_in_frequency_domain.ipynb) — executable processing pipeline, quantitative results, figures, and validation checks.
+- [Implementation](notebooks/filtering_in_frequency_domain.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
