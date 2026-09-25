@@ -22,24 +22,22 @@ The modules progress from image representation and transformations to spatial/fr
 
 ## Common Notebook Structure
 
-Each module follows the same four-part engineering workflow:
+Each lab follows the same notebook-first organization:
 
 ```text
-Problem Statement
-        ↓
-Requirements Gathering & Approach
-        ↓
-Theory
-        ↓
-Implementation
+notebooks/
+├── theory.ipynb
+├── problem_statement.ipynb
+├── requirements.ipynb
+└── main.ipynb
 ```
 
-- **Problem Statement** — context, inputs, objectives, constraints, and expected deliverables.
-- **Requirements Gathering & Approach** — implementation requirements, selected methods, acceptance criteria, and task traceability.
-- **Theory** — mathematical foundations, assumptions, method behavior, and limitations.
-- **Implementation** — executable code, generated figures, quantitative results, diagnostics, and validation.
+- **Theory** — concepts, mathematical foundations, assumptions, and limitations.
+- **Problem Statement** — context, tasks, inputs, learning objectives, and deliverables.
+- **Requirements** — environment, dependencies, required data, and execution checks.
+- **Implementation** — executable workflow, figures, metrics, discussion, and validation.
 
-## Engineering Standard
+## Lab Standard
 
 Across the modules:
 
@@ -49,7 +47,7 @@ Across the modules:
 - parameter studies are used where method behavior depends on tuning;
 - generated figures are stored under `outputs/figures/`;
 - quantitative metrics and visual evidence are used together;
-- final outputs are checked explicitly for reproducibility.
+- final outputs are checked explicitly for reproducibility where relevant.
 
 ## Directory Structure
 
