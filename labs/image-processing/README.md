@@ -65,7 +65,7 @@ Each module contains its own documentation, data, notebooks, outputs, and depend
 
 ## Related Standalone Project
 
-The larger medical-image-processing project has been moved to its own repository:
+The larger fluoroscopy workflow is maintained separately so this repository remains focused on laboratory modules:
 
 [**Background Subtraction — Fluoroscopy →**](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
 
