@@ -1,4 +1,16 @@
-# Image Processing
+<p>
+  <img align="left" src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" height="64">
+</p>
+<p align="right"><strong>MSc. CORO DASSIP</strong></p>
+<br clear="both">
+
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>Image Processing</h1>
+    </td>
+  </tr>
+</table>
 
 Academic laboratory work in image processing developed within the MSc. CORO DASSIP programme at École Centrale de Nantes.
 
