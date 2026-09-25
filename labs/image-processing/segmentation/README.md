@@ -14,10 +14,10 @@
 
 Classical image-segmentation laboratory covering thresholding, morphology, connected components, contours, color segmentation, watershed, segmentation metrics, and end-to-end mask generation.
 
-The module is organized into four complementary notebooks:
+The lab is organized into four complementary notebooks:
 
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 28 required tasks.
-- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical formulation of thresholding, morphology, region analysis, watershed, evaluation metrics, and limitations.
 - [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
@@ -73,10 +73,10 @@ A successful execution ends with:
 All image-segmentation validation checks passed.
 ```
 
-## Project Structure
+## Lab Structure
 
 ```text
-Image_Segmentation/
+segmentation/
 ├── data/
 ├── notebooks/
 │   ├── problem_statement.ipynb
