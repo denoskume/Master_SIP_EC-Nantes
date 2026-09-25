@@ -16,10 +16,10 @@ Digital-image laboratory covering numerical image representation, sampling, quan
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/image_processing_fundamental_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
-- [Requirements Gathering & Approach](notebooks/image_processing_fundamental_requirements_gathering_and_approach.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/image_processing_fundamental_theory.ipynb) — mathematical and numerical foundations for image representation, statistics, noise models, metrics, and failure analysis.
-- [Implementation](notebooks/image_processing_fundamental.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, selected methods, acceptance criteria, and implementation traceability.
+- [Theory](notebooks/theory.ipynb) — mathematical and numerical foundations for image representation, statistics, noise models, metrics, and failure analysis.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -60,7 +60,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [image_processing_fundamental.ipynb](notebooks/image_processing_fundamental.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -74,10 +74,10 @@ All fundamental validation checks passed.
 image-processing-fundamentals/
 ├── data/
 ├── notebooks/
-│   ├── image_processing_fundamental_problem_statement.ipynb
-│   ├── image_processing_fundamental_requirements_gathering_and_approach.ipynb
-│   ├── image_processing_fundamental_theory.ipynb
-│   └── image_processing_fundamental.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
