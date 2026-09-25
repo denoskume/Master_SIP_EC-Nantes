@@ -58,7 +58,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Image_Processing/Image_Segmentation
+cd ~/msc-coro-dassip-portfolio/labs/image-processing/segmentation
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
