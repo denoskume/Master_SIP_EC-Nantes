@@ -43,7 +43,7 @@ Main outputs:
 From the module directory:
 
 ```bash
-cd ~/Master_SIP_EC-Nantes/Lab_Works/Computer_Vision/Deep_Learning
+cd ~/msc-coro-dassip-portfolio/labs/computer-vision/deep-learning
 
 source .venv/bin/activate
 python -m pip install -r requirements.txt
@@ -61,7 +61,7 @@ All Deep Learning validation checks passed.
 ## Project Structure
 
 ```text
-Deep_Learning/
+deep-learning/
 ├── data/
 ├── notebooks/
 │   ├── deep_learning_problem_statement.ipynb
