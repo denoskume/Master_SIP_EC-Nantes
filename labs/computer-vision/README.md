@@ -39,10 +39,10 @@ module/
 ├── README.md
 ├── data/
 ├── notebooks/
-│   ├── *_problem_statement.ipynb
-│   ├── *_requirements_gathering_and_approach.ipynb
-│   ├── *_theory.ipynb
-│   └── *.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 └── requirements.txt
