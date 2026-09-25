@@ -1,38 +1,37 @@
 # Master SIP — Centrale Nantes
 
 **Academic engineering portfolio in Data Science, Signal & Image Processing**  
-Computer Vision • Image Processing • Deep Learning • Multimodal Machine Learning
+Computer Vision • Image Processing • Deep Learning
 
-This repository contains laboratory work developed during the **Master CORO / DASSIP at École Centrale de Nantes**. The emphasis is on reproducible implementations, quantitative validation, technical interpretation, and clean engineering documentation.
+This repository contains laboratory work developed during the **Master CORO / DASSIP at École Centrale de Nantes**. The focus is on reproducible implementations, quantitative validation, technical interpretation, and structured engineering documentation.
 
 ---
 
-## Selected Work
+## Lab Work
 
-| Area | Module / Project | Main topics |
-| --- | --- | --- |
-| **Computer Vision** | [Camera Calibration](Lab_Works/Computer_Vision/Camera_Calibration) | Zhang calibration, DLT, SVD, intrinsic/extrinsic estimation, reprojection error |
-| **Computer Vision** | [Feature Detection & Tracking](Lab_Works/Computer_Vision/Feature_Detection) | ORB, Hamming matching, RANSAC, homography, object tracking |
-| **Deep Learning** | [MNIST Classification](Lab_Works/Computer_Vision/Deep_Learning) | PyTorch MLPs, training, evaluation, architecture comparison |
-| **Image Processing** | [Fundamentals](Lab_Works/Image_Processing/Image_Processing_Fundamental) | intensity operations, histograms, image representation |
-| **Image Processing** | [Image Transformation](Lab_Works/Image_Processing/Image_Transformation) | geometric and intensity transformations |
-| **Image Processing** | [Spatial-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Spatial_Domain) | convolution, smoothing, sharpening, derivatives |
-| **Image Processing** | [Frequency-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Frequency_Domain) | FFT, spectral analysis, Butterworth/Gaussian/Ideal filtering, notch filtering |
-| **Image Processing** | [Image Segmentation](Lab_Works/Image_Processing/Image_Segmentation) | thresholding, morphology, connected components, watershed, metrics |
+### Computer Vision
 
-### Standalone Projects
+| Module | Main topics |
+| --- | --- |
+| [Camera Calibration](Lab_Works/Computer_Vision/Camera_Calibration) | Zhang calibration, normalized DLT, SVD, intrinsic/extrinsic estimation, reprojection error |
+| [Feature Detection & Tracking](Lab_Works/Computer_Vision/Feature_Detection) | ORB, Hamming matching, BFMatcher, RANSAC, homography, object tracking |
+| [Deep Learning](Lab_Works/Computer_Vision/Deep_Learning) | PyTorch MLP, MNIST classification, BatchNorm, ReLU, Cross-Entropy, Adam, model evaluation |
 
-| Area | Project | Main topics |
-| --- | --- | --- |
-| **Medical Imaging** | [Background Subtraction](https://github.com/denoskume/Background-Subtraction-Fluoroscopy) | static background subtraction, spatial/spectral filtering, morphology, segmentation, sequence validation |
-| **Multimodal ML** | [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification) | zero-shot audio classification, prompt engineering, audio-text embeddings |
-| **Python Engineering** | [Python CardGame](https://github.com/denoskume/Python-CardGame) | Python modules, finite-state machine, event-driven logic, JSON persistence, Pygame |
+### Image Processing
+
+| Module | Main topics |
+| --- | --- |
+| [Image Processing Fundamentals](Lab_Works/Image_Processing/Image_Processing_Fundamental) | image representation, intensity operations, histograms |
+| [Image Transformation](Lab_Works/Image_Processing/Image_Transformation) | geometric and intensity transformations |
+| [Spatial-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Spatial_Domain) | convolution, smoothing, denoising, sharpening, Sobel, Prewitt, Scharr |
+| [Frequency-Domain Filtering](Lab_Works/Image_Processing/Filtering_in_Frequency_Domain) | FFT, spectral analysis, Ideal/Gaussian/Butterworth filters, notch filtering |
+| [Image Segmentation](Lab_Works/Image_Processing/Image_Segmentation) | thresholding, morphology, connected components, HSV segmentation, watershed, IoU, Dice |
 
 ---
 
 ## Notebook Organization
 
-The laboratory modules use a consistent four-notebook organization where appropriate:
+Laboratory modules use a consistent four-notebook organization where appropriate:
 
 ```text
 Problem Statement
@@ -44,12 +43,12 @@ Theory
 Implementation
 ```
 
-- **Problem Statement** — engineering context, objectives, constraints, and deliverables.
-- **Requirements & Approach** — implementation requirements, strategy, and acceptance criteria.
+- **Problem Statement** — context, objectives, constraints, and expected deliverables.
+- **Requirements Gathering & Approach** — implementation requirements, workflow, and acceptance criteria.
 - **Theory** — mathematical foundations, assumptions, and limitations.
-- **Implementation** — executable experiments, figures, metrics, diagnostics, and validation.
+- **Implementation** — executable code, experiments, figures, metrics, diagnostics, and validation.
 
-Generated results are stored in each module's `outputs/` directory.
+Generated results are stored inside each module's `outputs/` directory when applicable.
 
 ---
 
@@ -57,18 +56,21 @@ Generated results are stored in each module's `outputs/` directory.
 
 ```text
 Master_SIP_EC-Nantes/
-└── Lab_Works/
-    ├── Computer_Vision/
-    │   ├── Camera_Calibration/
-    │   ├── Feature_Detection/
-    │   └── Deep_Learning/
-    │
-    └── Image_Processing/
-        ├── Image_Processing_Fundamental/
-        ├── Image_Transformation/
-        ├── Filtering_in_Spatial_Domain/
-        ├── Filtering_in_Frequency_Domain/
-        └── Image_Segmentation/
+├── Lab_Works/
+│   ├── Computer_Vision/
+│   │   ├── Camera_Calibration/
+│   │   ├── Deep_Learning/
+│   │   └── Feature_Detection/
+│   │
+│   └── Image_Processing/
+│       ├── Filtering_in_Frequency_Domain/
+│       ├── Filtering_in_Spatial_Domain/
+│       ├── Image_Processing_Fundamental/
+│       ├── Image_Segmentation/
+│       └── Image_Transformation/
+│
+├── .gitignore
+└── README.md
 ```
 
 ---
@@ -76,11 +78,11 @@ Master_SIP_EC-Nantes/
 ## Engineering Practices
 
 - reproducible Python environments and explicit dependencies;
-- clear separation of data, notebooks, and generated outputs;
+- clear separation of notebooks, data, and generated outputs;
 - quantitative and visual validation;
 - controlled experiments and parameter studies;
-- structured technical documentation;
-- committed figures and notebook outputs where useful for review.
+- structured problem statements, theory, and implementation workflows;
+- concise technical documentation and reproducible results.
 
 ---
 
@@ -94,6 +96,6 @@ Master_SIP_EC-Nantes/
 
 **Programme:** Master CORO — Data Science, Signal & Image Processing (DASSIP)  
 **Institution:** École Centrale de Nantes  
-**Repository scope:** academic laboratory work and engineering exercises
+**Repository scope:** laboratory work in computer vision, image processing, and deep learning
 
 [GitHub profile →](https://github.com/denoskume)
