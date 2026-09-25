@@ -1,4 +1,16 @@
-# Deep Learning for MNIST Classification
+<p>
+  <img align="left" src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" height="64">
+</p>
+<p align="right"><strong>MSc. CORO DASSIP</strong></p>
+<br clear="both">
+
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>Deep Learning for MNIST Classification</h1>
+    </td>
+  </tr>
+</table>
 
 Handwritten-digit classification with a one-hidden-layer MLP in PyTorch, comparing hidden sizes of 128, 256, and 512 neurons on MNIST.
 
