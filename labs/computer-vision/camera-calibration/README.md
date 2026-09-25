@@ -16,10 +16,10 @@ Planar camera calibration from multiple chessboard views using normalized DLT an
 
 The module is organized into four complementary notebooks:
 
-- [Problem Statement](notebooks/camera_calibration_problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
-- [Requirements Gathering & Approach](notebooks/camera_calibration_requirements_gathering_and_approach.ipynb) — engineering requirements, method selection, acceptance criteria, and implementation traceability.
-- [Theory](notebooks/camera_calibration_theory.ipynb) — mathematical formulation, derivations, modeling assumptions, failure modes, and limitations.
-- [Implementation](notebooks/camera_calibration.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
+- [Requirements Gathering & Approach](notebooks/requirements.ipynb) — engineering requirements, method selection, acceptance criteria, and implementation traceability.
+- [Theory](notebooks/theory.ipynb) — mathematical formulation, derivations, modeling assumptions, failure modes, and limitations.
+- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
 
 ## Outputs
 
@@ -50,7 +50,7 @@ python -m pip install -r requirements.txt
 code .
 ```
 
-Open [camera_calibration.ipynb](notebooks/camera_calibration.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
+Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
 A successful execution ends with:
 
@@ -65,10 +65,10 @@ camera-calibration/
 ├── data/
 │   └── calibration_images/
 ├── notebooks/
-│   ├── camera_calibration_problem_statement.ipynb
-│   ├── camera_calibration_requirements_gathering_and_approach.ipynb
-│   ├── camera_calibration_theory.ipynb
-│   └── camera_calibration.ipynb
+│   ├── problem_statement.ipynb
+│   ├── requirements.ipynb
+│   ├── theory.ipynb
+│   └── main.ipynb
 ├── outputs/
 │   └── figures/
 ├── requirements.txt
