@@ -46,9 +46,17 @@ Implementation
 - **Problem Statement** — context, objectives, constraints, and expected deliverables.
 - **Requirements Gathering & Approach** — implementation requirements, workflow, and acceptance criteria.
 - **Theory** — mathematical foundations, assumptions, and limitations.
-- **Implementation** — executable code, experiments, figures, metrics, diagnostics, and validation.
+- **Implementation** — concise execution headings, executable code, generated outputs, metrics, diagnostics, and validation only. Theory, interpretive guidance, and method-selection discussion remain in the supporting notebooks.
 
 Generated results are stored inside each module's `outputs/` directory when applicable.
+
+### Standalone Projects
+
+The larger project work has been moved out of this academic lab repository and is maintained independently:
+
+- [Background Subtraction — Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
+- [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification)
+- [Python CardGame](https://github.com/denoskume/Python-CardGame)
 
 ---
 
@@ -78,7 +86,8 @@ Master_SIP_EC-Nantes/
 ## Engineering Practices
 
 - reproducible Python environments and explicit dependencies;
-- clear separation of notebooks, data, and generated outputs;
+- clear separation of problem definition, requirements, theory, implementation, data, and generated outputs;
+- implementation notebooks kept code-focused, with explanatory theory and discussion isolated in the supporting notebooks;
 - quantitative and visual validation;
 - controlled experiments and parameter studies;
 - structured problem statements, theory, and implementation workflows;
