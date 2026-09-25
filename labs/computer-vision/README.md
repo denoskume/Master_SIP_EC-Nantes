@@ -20,33 +20,31 @@ The modules focus on reproducible implementation, quantitative validation, and t
 
 ## Common Notebook Structure
 
-Each module follows the same four-part engineering workflow where appropriate:
+Each lab follows the same notebook-first organization:
 
 ```text
-Problem Statement
-        ↓
-Requirements Gathering & Approach
-        ↓
-Theory
-        ↓
-Implementation
+notebooks/
+├── theory.ipynb
+├── problem_statement.ipynb
+├── requirements.ipynb
+└── main.ipynb
 ```
 
-- **Problem Statement** — context, inputs, objectives, constraints, and expected deliverables.
-- **Requirements Gathering & Approach** — implementation requirements, method choices, acceptance criteria, and task traceability.
-- **Theory** — mathematical foundations, assumptions, failure modes, and limitations.
-- **Implementation** — executable code, outputs, metrics, diagnostics, and validation.
+- **Theory** — concepts, mathematical foundations, assumptions, and limitations.
+- **Problem Statement** — context, tasks, inputs, learning objectives, and deliverables.
+- **Requirements** — environment, dependencies, required data, and execution checks.
+- **Implementation** — executable workflow, figures, metrics, discussion, and validation.
 
-## Engineering Standard
+## Lab Standard
 
 Across the modules:
 
 - paths are repository-relative;
 - dependencies are declared in each module's `requirements.txt`;
-- implementation notebooks execute top-to-bottom;
+- `main.ipynb` executes top-to-bottom;
 - generated evidence is stored under `outputs/`;
 - numerical results are paired with visual diagnostics;
-- final cells include explicit validation and consistency checks.
+- final cells include explicit validation and consistency checks where relevant.
 
 ## Directory Structure
 
