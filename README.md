@@ -147,7 +147,10 @@ msc-coro-dassip-portfolio/
       <img src="assets/tools/linux.svg" height="44" alt="Linux" /><br>
       <sub><b>Linux</b></sub>
     </td>
-    <td></td>
+    <td align="center" width="100">
+      <img src="assets/tools/git.svg" height="44" alt="Git" /><br>
+      <sub><b>Git</b></sub>
+    </td>
   </tr>
 </table>
 
