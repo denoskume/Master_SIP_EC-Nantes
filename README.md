@@ -151,4 +151,8 @@ Automatic checks run when changes are pushed to `main` or submitted through a pu
 
 ---
 
-[GitHub profile →](https://github.com/denoskume)
+<p align="center">
+  <a href="https://github.com/denoskume">
+    <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
+</p>
