@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Image Transformation</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Image Transformation</h1>
 
 Image transformation laboratory covering pointwise intensity mappings, homogeneous-coordinate geometry, inverse mapping, interpolation, transformation composition, and affine image warping.
 

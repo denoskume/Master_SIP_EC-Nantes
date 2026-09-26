@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Deep Learning for MNIST Classification</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Deep Learning</h1>
 
 Handwritten-digit classification with a one-hidden-layer MLP in PyTorch, comparing hidden sizes of 128, 256, and 512 neurons on MNIST.
 

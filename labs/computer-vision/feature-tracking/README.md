@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Feature Detection and Object Tracking</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Feature Detection & Tracking</h1>
 
 Feature-based object tracking in video using ORB keypoints/descriptors, Hamming-distance matching, RANSAC homography estimation, and perspective transformation of an initial object bounding box.
 

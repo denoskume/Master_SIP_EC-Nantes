@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Filtering in Spatial Domain</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Spatial-Domain Filtering</h1>
 
 Neighborhood-based image-filtering laboratory covering convolution, border handling, smoothing, denoising, sharpening, derivative operators, RGB filtering, quantitative comparison, and validation.
 

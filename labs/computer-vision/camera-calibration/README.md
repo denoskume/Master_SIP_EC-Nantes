@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Camera Calibration</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Camera Calibration</h1>
 
 Planar camera calibration from multiple chessboard views using normalized DLT and Zhang's method.
 

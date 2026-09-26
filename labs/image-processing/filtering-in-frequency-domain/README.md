@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Filtering in Frequency Domain</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Frequency-Domain Filtering</h1>
 
 Fourier-domain image-processing laboratory covering spatial frequency, 2-D FFT analysis, magnitude and phase, classical frequency filters, periodic-noise suppression, moiré removal, illumination correction, and validation.
 

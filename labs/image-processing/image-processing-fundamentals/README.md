@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Image Processing Fundamentals</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Image Processing Fundamentals</h1>
 
 Digital-image laboratory covering numerical image representation, sampling, quantization, pixels, channels, histograms, noise, image comparison, and reproducible validation.
 

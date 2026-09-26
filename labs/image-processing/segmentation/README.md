@@ -4,13 +4,7 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<table width="85%" align="center">
-  <tr>
-    <td align="center">
-      <h1>Image Segmentation</h1>
-    </td>
-  </tr>
-</table>
+<h1 align="center">Image Segmentation</h1>
 
 Classical image-segmentation laboratory covering thresholding, morphology, connected components, contours, color segmentation, watershed, segmentation metrics, and end-to-end mask generation.
 
