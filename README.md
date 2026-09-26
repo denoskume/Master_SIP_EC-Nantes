@@ -6,7 +6,7 @@
 
 <h1 align="center">Computer Vision, Image Processing & Deep Learning</h1>
 
-Welcome. This portfolio is where theory becomes something I can build, test, measure, and explain.
+Welcome — thank you for taking the time to explore my work. This portfolio is where theory becomes something I can build, test, measure, and explain.
 
 Across eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**, I work through complete technical problems — from the underlying mathematics and assumptions to implementation, diagnostics, quantitative evaluation, and validated results.
 
