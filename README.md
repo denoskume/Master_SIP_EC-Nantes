@@ -6,9 +6,9 @@
 
 <h1 align="center">MSc CORO DASSIP Portfolio</h1>
 
-Laboratory portfolio for the **MSc CORO DASSIP programme at École Centrale de Nantes**.
+Laboratory modules in **computer vision, image processing, and deep learning**.
 
-**Scope:** Computer Vision • Image Processing • Deep Learning
+**Programme:** MSc CORO — Data Science, Signal & Image Processing (DASSIP), École Centrale de Nantes
 
 ---
 
