@@ -4,11 +4,11 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<h1 align="center">MSc CORO DASSIP Portfolio</h1>
+<h1 align="center">Computer Vision, Image Processing & Deep Learning</h1>
 
-Laboratory modules in **computer vision, image processing, and deep learning**.
+Eight laboratory modules covering core methods, implementation, quantitative evaluation, and validation.
 
-**Programme:** MSc CORO — Data Science, Signal & Image Processing (DASSIP), École Centrale de Nantes
+Each module provides a **problem statement**, **requirements**, **theoretical foundations**, and an **executable implementation** with generated results.
 
 ---
 
@@ -126,11 +126,5 @@ It checks:
 **Python • NumPy • SciPy • Matplotlib • OpenCV • Pillow • PyTorch • python-mnist • tqdm • Jupyter • VS Code • WSL Ubuntu**
 
 ---
-
-## Academic Context
-
-**Programme:** MSc CORO — Data Science, Signal & Image Processing (DASSIP)  
-**Institution:** École Centrale de Nantes  
-**Repository scope:** Computer Vision, Image Processing, and Deep Learning
 
 [GitHub profile →](https://github.com/denoskume)
