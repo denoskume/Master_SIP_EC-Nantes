@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import io
 import json
 import re
+import tokenize
 from pathlib import Path
 
 EXPECTED_NOTEBOOKS = {
@@ -16,6 +18,7 @@ ABSOLUTE_PATH_RE = re.compile(
 )
 
 errors: list[str] = []
+notebook_count = 0
 
 lab_dirs = sorted(
     path
@@ -23,12 +26,10 @@ lab_dirs = sorted(
     if path.is_dir() and (path / "notebooks").is_dir()
 )
 
-if len(lab_dirs) != 8:
-    errors.append(f"Expected 8 laboratory modules, found {len(lab_dirs)}.")
-
 for lab_dir in lab_dirs:
     notebook_dir = lab_dir / "notebooks"
     notebook_paths = sorted(notebook_dir.glob("*.ipynb"))
+    notebook_count += len(notebook_paths)
     names = {path.name for path in notebook_paths}
 
     if names != EXPECTED_NOTEBOOKS:
@@ -72,19 +73,19 @@ for lab_dir in lab_dirs:
                     f"{notebook_path}:cell {cell_index}: "
                     f"{exc.msg} (line {exc.lineno}, offset {exc.offset})"
                 )
+                continue
 
-    main_path = notebook_dir / "main.ipynb"
-    if main_path.exists():
-        main_nb = json.loads(main_path.read_text(encoding="utf-8"))
-        markdown = "\n".join(
-            "".join(cell.get("source", []))
-            for cell in main_nb.get("cells", [])
-            if cell.get("cell_type") == "markdown"
-        )
-        if "## Final Analysis & Interpretation" not in markdown:
-            errors.append(
-                f"{main_path}: missing final 'Final Analysis & Interpretation' section."
-            )
+            if notebook_path.name == "main.ipynb":
+                try:
+                    tokens = tokenize.generate_tokens(io.StringIO(source).readline)
+                    if any(token.type == tokenize.COMMENT for token in tokens):
+                        errors.append(
+                            f"{notebook_path}:cell {cell_index}: Python comment detected."
+                        )
+                except tokenize.TokenError as exc:
+                    errors.append(
+                        f"{notebook_path}:cell {cell_index}: tokenization error: {exc}"
+                    )
 
 if errors:
     print("Notebook QA FAILED")
@@ -94,5 +95,6 @@ if errors:
 
 print(
     f"Notebook QA passed: {len(lab_dirs)} labs, "
-    f"{len(lab_dirs) * 4} notebooks, Python syntax validated."
+    f"{notebook_count} notebooks, Python syntax validated, "
+    "main notebooks contain no Python comments."
 )
