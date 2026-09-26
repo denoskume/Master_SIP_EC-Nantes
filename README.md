@@ -1,9 +1,14 @@
-# MSc CORO DASSIP Portfolio — Centrale Nantes
+<p>
+  <img align="left" src="https://www.ec-nantes.fr/medias/photo/logocn-rvb_1648479844750-png?ID_FICHE=178994&amp;INLINE=FALSE" alt="Centrale Nantes" height="64">
+</p>
+<p align="right"><strong>MSc. CORO DASSIP</strong></p>
+<br clear="both">
 
-**Academic engineering portfolio in Data Science, Signal & Image Processing**  
-Computer Vision • Image Processing • Deep Learning
+<h1 align="center">MSc CORO DASSIP Portfolio</h1>
 
-This repository contains laboratory work developed within the **MSc CORO DASSIP programme at École Centrale de Nantes**. The portfolio emphasizes reproducible implementations, quantitative validation, technical interpretation, and structured engineering documentation.
+Laboratory portfolio for the **MSc CORO DASSIP programme at École Centrale de Nantes**.
+
+**Scope:** Computer Vision • Image Processing • Deep Learning
 
 ---
 
@@ -17,7 +22,7 @@ This repository contains laboratory work developed within the **MSc CORO DASSIP 
 | [Feature Detection & Tracking](labs/computer-vision/feature-tracking) | ORB, Hamming matching, BFMatcher, RANSAC, homography, object tracking |
 | [Deep Learning](labs/computer-vision/deep-learning) | PyTorch MLP, MNIST classification, BatchNorm, ReLU, Cross-Entropy, Adam, model evaluation |
 
-[Computer Vision lab overview →](labs/computer-vision)
+[Computer Vision →](labs/computer-vision)
 
 ### Image Processing
 
@@ -29,13 +34,13 @@ This repository contains laboratory work developed within the **MSc CORO DASSIP 
 | [Frequency-Domain Filtering](labs/image-processing/filtering-in-frequency-domain) | FFT, spectral analysis, Ideal/Gaussian/Butterworth filters, notch filtering |
 | [Image Segmentation](labs/image-processing/segmentation) | thresholding, morphology, connected components, HSV segmentation, watershed, IoU, Dice |
 
-[Image Processing lab overview →](labs/image-processing)
+[Image Processing →](labs/image-processing)
 
 ---
 
-## Notebook Standard
+## Notebook Structure
 
-Each laboratory module follows the same notebook-first structure:
+Each laboratory module contains:
 
 ```text
 notebooks/
@@ -45,12 +50,10 @@ notebooks/
 └── main.ipynb
 ```
 
-- **Theory** — concepts, formulas, assumptions, method behavior, and references.
-- **Problem Statement** — context, learning objectives, tasks, input data, and expected deliverables.
-- **Requirements** — Python environment, required packages, input-data checks, and execution prerequisites.
-- **Implementation** — executable workflow, generated figures, quantitative results, discussion, and validation.
-
-Each lab keeps its own `data/`, `notebooks/`, `outputs/`, `README.md`, and `requirements.txt`.
+- **Theory** — concepts, formulas, assumptions, limitations, and references.
+- **Problem Statement** — context, objectives, tasks, input data, and deliverables.
+- **Requirements** — Python version, dependencies, required data, and installation instructions.
+- **Implementation** — executable code, outputs, metrics, diagnostics, validation, and final interpretation.
 
 ---
 
@@ -85,28 +88,38 @@ msc-coro-dassip-portfolio/
 
 ## Standalone Projects
 
-Larger projects are maintained independently so each can be reviewed as a complete engineering project:
-
 - [Background Subtraction — Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
 - [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification)
 - [Python CardGame](https://github.com/denoskume/Python-CardGame)
 
 ---
 
-## Lab Standard
+## Repository Standard
 
-- notebook-based implementation rather than a software-package layout;
-- explicit dependencies in each lab's `requirements.txt`;
-- repository-relative paths and reproducible execution;
-- separate theory, problem statement, requirements, and implementation notebooks;
-- generated figures and results stored under `outputs/`;
-- quantitative and visual validation where relevant.
+- one `requirements.txt` per laboratory module;
+- repository-relative data and output paths;
+- four notebooks per laboratory module;
+- generated figures under `outputs/figures/`;
+- explicit numerical and output validation in implementation notebooks;
+- final technical interpretation in each `main.ipynb`.
 
 ---
 
 ## Automated QA
 
-Every push and pull request runs the repository-level **Notebook QA** workflow. It verifies the expected 8-lab / 32-notebook structure, validates notebook JSON, compiles every Python code cell, rejects machine-specific absolute paths and the deprecated `Zero to Mastery` wording, and confirms that each implementation notebook contains a final analysis section.
+The `Notebook QA` workflow runs on pushes to `main` and on pull requests.
+
+It checks:
+
+- 8 laboratory modules;
+- 32 notebooks;
+- notebook JSON validity;
+- Python syntax in every code cell;
+- absence of machine-specific absolute paths;
+- absence of the deprecated `Zero to Mastery` wording;
+- presence of `Final Analysis & Interpretation` in every implementation notebook.
+
+---
 
 ## Technical Stack
 
@@ -118,6 +131,6 @@ Every push and pull request runs the repository-level **Notebook QA** workflow. 
 
 **Programme:** MSc CORO — Data Science, Signal & Image Processing (DASSIP)  
 **Institution:** École Centrale de Nantes  
-**Repository scope:** laboratory work in computer vision, image processing, and deep learning
+**Repository scope:** Computer Vision, Image Processing, and Deep Learning
 
 [GitHub profile →](https://github.com/denoskume)

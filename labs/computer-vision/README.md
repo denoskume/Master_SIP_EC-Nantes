@@ -6,11 +6,11 @@
 
 <h1 align="center">Computer Vision</h1>
 
-Laboratory work in **computer vision and deep learning** developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
+Laboratory modules in **computer vision and deep learning**.
 
-The modules focus on reproducible implementation, quantitative validation, and technical interpretation rather than isolated code exercises.
+**Topics:** planar camera calibration, feature-based object tracking, and MNIST classification.
 
-## Current Modules
+## Modules
 
 | Module | Technical scope |
 | --- | --- |
@@ -18,9 +18,9 @@ The modules focus on reproducible implementation, quantitative validation, and t
 | [Feature Detection & Tracking](feature-tracking) | ORB, binary descriptors, Hamming matching, BFMatcher, RANSAC, homography, fixed-reference object tracking |
 | [Deep Learning](deep-learning) | PyTorch MLP on MNIST, BatchNorm, ReLU, Cross-Entropy, Adam, hidden-size comparison, confidence analysis |
 
-## Common Notebook Structure
+## Notebook Structure
 
-Each lab follows the same notebook-first organization:
+Each module contains:
 
 ```text
 notebooks/
@@ -30,21 +30,19 @@ notebooks/
 └── main.ipynb
 ```
 
-- **Theory** — concepts, mathematical foundations, assumptions, and limitations.
-- **Problem Statement** — context, tasks, inputs, learning objectives, and deliverables.
-- **Requirements** — environment, dependencies, required data, and execution checks.
-- **Implementation** — executable workflow, figures, metrics, discussion, and validation.
+- **Theory** — mathematical foundations, assumptions, limitations, and references.
+- **Problem Statement** — context, tasks, inputs, objectives, and deliverables.
+- **Requirements** — environment, dependencies, required data, and installation.
+- **Implementation** — code, outputs, metrics, diagnostics, validation, and final interpretation.
 
-## Lab Standard
+## Module Standard
 
-Across the modules:
-
-- paths are repository-relative;
-- dependencies are declared in each module's `requirements.txt`;
-- `main.ipynb` is structured for top-to-bottom execution;
-- generated evidence is stored under `outputs/`;
-- numerical results are paired with visual diagnostics;
-- implementation notebooks close with explicit validation, consistency checks, and final technical interpretation where relevant.
+- repository-relative paths;
+- module-specific `requirements.txt`;
+- top-to-bottom implementation workflow;
+- generated figures under `outputs/figures/`;
+- numerical and visual diagnostics;
+- explicit validation and final technical interpretation.
 
 ## Directory Structure
 
@@ -70,12 +68,6 @@ computer-vision/
     ├── outputs/
     └── requirements.txt
 ```
-
-## Related Standalone Project
-
-The larger fluoroscopy project is maintained separately so it can be reviewed as a complete computer-vision and image-processing workflow:
-
-[**Background Subtraction — Fluoroscopy →**](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
 
 ---
 

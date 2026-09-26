@@ -6,11 +6,11 @@
 
 <h1 align="center">Image Processing</h1>
 
-Laboratory work in **digital image processing** developed within the MSc CORO DASSIP programme at École Centrale de Nantes.
+Laboratory modules in **digital image processing**.
 
-The modules progress from image representation and transformations to spatial/frequency filtering and segmentation, with reproducible code, controlled experiments, and quantitative validation.
+**Topics:** image representation, intensity and geometric transformations, spatial filtering, frequency-domain filtering, and segmentation.
 
-## Current Modules
+## Modules
 
 | Module | Technical scope |
 | --- | --- |
@@ -20,9 +20,9 @@ The modules progress from image representation and transformations to spatial/fr
 | [Frequency-Domain Filtering](filtering-in-frequency-domain) | 2-D FFT, magnitude/phase analysis, Ideal/Gaussian/Butterworth filters, notch filtering, moiré suppression, illumination correction |
 | [Image Segmentation](segmentation) | thresholding, morphology, connected components, contours, HSV segmentation, watershed, pixel accuracy, precision, recall, IoU, Dice |
 
-## Common Notebook Structure
+## Notebook Structure
 
-Each lab follows the same notebook-first organization:
+Each module contains:
 
 ```text
 notebooks/
@@ -32,22 +32,20 @@ notebooks/
 └── main.ipynb
 ```
 
-- **Theory** — concepts, mathematical foundations, assumptions, and limitations.
-- **Problem Statement** — context, tasks, inputs, learning objectives, and deliverables.
-- **Requirements** — environment, dependencies, required data, and execution checks.
-- **Implementation** — executable workflow, figures, metrics, discussion, and validation.
+- **Theory** — mathematical foundations, assumptions, limitations, and references.
+- **Problem Statement** — context, tasks, inputs, objectives, and deliverables.
+- **Requirements** — environment, dependencies, required data, and installation.
+- **Implementation** — code, outputs, metrics, diagnostics, validation, and final interpretation.
 
-## Lab Standard
+## Module Standard
 
-Across the modules:
-
-- paths are repository-relative;
-- dependencies are explicit in `requirements.txt`;
-- notebooks are structured for top-to-bottom execution in a dedicated environment;
-- parameter studies are used where method behavior depends on tuning;
-- generated figures are stored under `outputs/figures/`;
-- quantitative metrics and visual evidence are used together;
-- final outputs are checked explicitly for reproducibility, followed by a concise technical interpretation where relevant.
+- repository-relative paths;
+- module-specific `requirements.txt`;
+- top-to-bottom implementation workflow;
+- generated figures under `outputs/figures/`;
+- controlled parameter studies where defined by the experiment;
+- quantitative metrics and visual diagnostics;
+- explicit validation and final technical interpretation.
 
 ## Directory Structure
 
@@ -60,14 +58,6 @@ image-processing/
 ├── filtering-in-frequency-domain/
 └── segmentation/
 ```
-
-Each module contains its own documentation, data, notebooks, outputs, and dependency specification where applicable.
-
-## Related Standalone Project
-
-The larger fluoroscopy workflow is maintained separately so this repository remains focused on laboratory modules:
-
-[**Background Subtraction — Fluoroscopy →**](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
 
 ---
 
