@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import ast
 import io
 import json
 import re
@@ -63,10 +64,10 @@ for lab_dir in lab_dirs:
                 )
 
             try:
-                compile(
+                tree = ast.parse(
                     source,
-                    f"{notebook_path}:cell {cell_index}",
-                    "exec",
+                    filename=f"{notebook_path}:cell {cell_index}",
+                    mode="exec",
                 )
             except SyntaxError as exc:
                 errors.append(
@@ -87,6 +88,23 @@ for lab_dir in lab_dirs:
                         f"{notebook_path}:cell {cell_index}: tokenization error: {exc}"
                     )
 
+                for node in ast.walk(tree):
+                    if isinstance(
+                        node,
+                        (ast.Module, ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef),
+                    ):
+                        body = getattr(node, "body", [])
+                        if (
+                            body
+                            and isinstance(body[0], ast.Expr)
+                            and isinstance(body[0].value, ast.Constant)
+                            and isinstance(body[0].value.value, str)
+                        ):
+                            errors.append(
+                                f"{notebook_path}:cell {cell_index}: docstring detected."
+                            )
+                            break
+
 if errors:
     print("Notebook QA FAILED")
     for error in errors:
@@ -96,5 +114,5 @@ if errors:
 print(
     f"Notebook QA passed: {len(lab_dirs)} labs, "
     f"{notebook_count} notebooks, Python syntax validated, "
-    "main notebooks contain no Python comments."
+    "main notebooks contain no Python comments or docstrings."
 )
