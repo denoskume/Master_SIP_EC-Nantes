@@ -8,9 +8,9 @@
 
 Hello and welcome to my MSc CORO DASSIP portfolio!
 
-This repository captures how I turn technical concepts into working, testable solutions. Across eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**, each problem starts with the underlying theory, moves into implementation, and finishes with quantitative evaluation, diagnostics, and validation.
+This repository brings together eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**. Each lab starts from a defined experimental objective, establishes the relevant theory and assumptions, implements the required methods, and evaluates the resulting observations through quantitative measures, visual diagnostics, and validation checks.
 
-What you will find here is not just code, but the reasoning behind it: why a method is chosen, how its assumptions are tested, what the results mean, and where the approach reaches its limits. If you want to see how I think through technical problems from first principles to verified results, the modules below are the best place to start.
+Beyond the implementation itself, the notebooks document the experimental reasoning: how parameters and methods are selected, how results are interpreted, which assumptions hold, and where the observed limitations appear. The modules below provide a direct view of that process from laboratory specification to analyzed and validated results.
 
 ---
 
