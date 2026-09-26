@@ -15,7 +15,7 @@ All labs follow the same structure:
 - **Problem Statement** — defines the experiment
 - **Theory** — develops the required concepts and models
 - **Requirements** — specifies the environment and data
-- **Implementation** — contains the executable workflow, results, and analysis
+- **Implementation** — contains the executable workflow, results, and validation
 
 Source data and generated figures are kept separate in `data/` and `outputs/`.
 
