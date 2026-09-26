@@ -78,11 +78,22 @@ msc-coro-dassip-portfolio/
 
 ---
 
-## Other Projects
+## Projects
 
-- [Background Subtraction — Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
-- [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification)
-- [Python CardGame](https://github.com/denoskume/Python-CardGame)
+<p align="center">
+  <a href="https://github.com/denoskume/Background-Subtraction-Fluoroscopy">
+    <img src="assets/project-background-subtraction-light.svg" width="49%" alt="Background Subtraction" />
+  </a>
+  <a href="https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification">
+    <img src="assets/project-clap-light.svg" width="49%" alt="CLAP Audio Classification" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/denoskume/Python-CardGame">
+    <img src="assets/project-cardgame-light.svg" width="49%" alt="Python CardGame" />
+  </a>
+</p>
 
 ---
 
@@ -94,7 +105,25 @@ Automatic checks run when changes are pushed to `main` or submitted through a pu
 
 ## Tools and Libraries
 
-**Python • NumPy • SciPy • Matplotlib • OpenCV • Pillow • PyTorch • python-mnist • tqdm • Jupyter • VS Code • WSL Ubuntu**
+<p align="center">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="44" alt="Python" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" height="44" alt="NumPy" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scipy/scipy-original.svg" height="44" alt="SciPy" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matplotlib/matplotlib-original.svg" height="44" alt="Matplotlib" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opencv/opencv-original.svg" height="44" alt="OpenCV" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" height="44" alt="PyTorch" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jupyter/jupyter-original.svg" height="44" alt="Jupyter" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="44" alt="VS Code" />
+  &nbsp;&nbsp;
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" height="44" alt="Linux" />
+</p>
 
 ---
 
