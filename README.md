@@ -27,31 +27,44 @@ Beyond the code, the notebooks document the experimental reasoning: how methods 
 
 ### Computer Vision
 
-| Module | Main topics |
-| --- | --- |
-| [Camera Calibration](labs/computer-vision/camera-calibration) | normalized DLT, Zhang calibration, SVD, intrinsic/extrinsic estimation, reprojection error |
-| [Feature Detection & Tracking](labs/computer-vision/feature-tracking) | ORB, Hamming matching, BFMatcher, RANSAC, homography, object tracking |
-| [Deep Learning](labs/computer-vision/deep-learning) | PyTorch MLP, MNIST classification, BatchNorm, ReLU, Cross-Entropy, Adam, model evaluation |
+<p align="center">
+  <a href="labs/computer-vision/camera-calibration">
+    <img src="assets/labs/camera-calibration.svg" width="49%" alt="Camera Calibration" />
+  </a>
+  <a href="labs/computer-vision/feature-tracking">
+    <img src="assets/labs/feature-tracking.svg" width="49%" alt="Feature Detection and Tracking" />
+  </a>
+</p>
 
 <p align="center">
-  <a href="labs/computer-vision">
-    <img src="https://img.shields.io/badge/Computer_Vision-Open_Module-181717?style=for-the-badge" alt="Computer Vision" />
+  <a href="labs/computer-vision/deep-learning">
+    <img src="assets/labs/deep-learning.svg" width="49%" alt="Deep Learning" />
   </a>
 </p>
 
 ### Image Processing
 
-| Module | Main topics |
-| --- | --- |
-| [Image Processing Fundamentals](labs/image-processing/image-processing-fundamentals) | image representation, intensity operations, statistics, histograms, noise |
-| [Image Transformation](labs/image-processing/image-transformation) | intensity and geometric transformations, interpolation, affine mapping |
-| [Spatial-Domain Filtering](labs/image-processing/filtering-in-spatial-domain) | convolution, smoothing, denoising, sharpening, Sobel, Prewitt, Scharr |
-| [Frequency-Domain Filtering](labs/image-processing/filtering-in-frequency-domain) | FFT, spectral analysis, Ideal/Gaussian/Butterworth filters, notch filtering |
-| [Image Segmentation](labs/image-processing/segmentation) | thresholding, morphology, connected components, HSV segmentation, watershed, IoU, Dice |
+<p align="center">
+  <a href="labs/image-processing/image-processing-fundamentals">
+    <img src="assets/labs/image-processing-fundamentals.svg" width="49%" alt="Image Processing Fundamentals" />
+  </a>
+  <a href="labs/image-processing/image-transformation">
+    <img src="assets/labs/image-transformation.svg" width="49%" alt="Image Transformation" />
+  </a>
+</p>
 
 <p align="center">
-  <a href="labs/image-processing">
-    <img src="https://img.shields.io/badge/Image_Processing-Open_Module-181717?style=for-the-badge" alt="Image Processing" />
+  <a href="labs/image-processing/filtering-in-spatial-domain">
+    <img src="assets/labs/filtering-spatial.svg" width="49%" alt="Spatial-Domain Filtering" />
+  </a>
+  <a href="labs/image-processing/filtering-in-frequency-domain">
+    <img src="assets/labs/filtering-frequency.svg" width="49%" alt="Frequency-Domain Filtering" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="labs/image-processing/segmentation">
+    <img src="assets/labs/segmentation.svg" width="49%" alt="Image Segmentation" />
   </a>
 </p>
 
