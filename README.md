@@ -4,7 +4,13 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-# MSc CORO DASSIP — Portfolio
+<table width="85%" align="center">
+  <tr>
+    <td align="center">
+      <h1>MSc CORO DASSIP — Portfolio</h1>
+    </td>
+  </tr>
+</table>
 
 This repository brings together laboratory modules in **Computer Vision, Image Processing, and Deep Learning**.
 
