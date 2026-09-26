@@ -4,16 +4,22 @@
 <p align="right"><strong>MSc. CORO DASSIP</strong></p>
 <br clear="both">
 
-<h1 align="center">Computer Vision, Image Processing & Deep Learning</h1>
+# MSc CORO DASSIP — Portfolio
 
-Hello and welcome to my MSc CORO DASSIP portfolio!
+This repository brings together laboratory modules in Computer Vision, Image Processing, and Deep Learning from my MSc at Centrale Nantes.
 
-This repository brings together laboratory modules in **Computer Vision, Image Processing, and Deep Learning**. Each lab starts from a defined experimental objective, establishes the relevant theory and assumptions, implements the required methods, and evaluates the observations through quantitative measures, visual diagnostics, and validation checks.
+Each lab begins with a defined experimental objective, develops the relevant theory and assumptions, implements the required methods, and evaluates the results through quantitative measures, visual diagnostics, and validation checks.
 
-The repository follows the same structure across all labs: a **Problem Statement** defines the experiment, **Theory** develops the required concepts and models, **Requirements** specifies the environment and data, and **Implementation** contains the executable workflow, results, analysis, and validation. Source data and generated figures remain separated in dedicated `data/` and `outputs/` directories.
+All labs follow the same structure:
 
-Beyond the code, the notebooks document the experimental reasoning: how methods and parameters are selected, how results are interpreted, which assumptions hold, and where limitations appear. The modules below provide a direct path from laboratory specification to analyzed and validated results.
+- **Problem Statement** — defines the experiment
+- **Theory** — develops the required concepts and models
+- **Requirements** — specifies the environment and data
+- **Implementation** — contains the executable workflow, results, and analysis
 
+Source data and generated figures are kept separate in `data/` and `outputs/`.
+
+Beyond the code, the notebooks document the experimental reasoning: how methods and parameters are selected, how results are interpreted, which assumptions hold, and where limitations appear.
 ---
 
 ## Laboratory Work
