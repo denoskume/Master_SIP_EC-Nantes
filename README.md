@@ -6,11 +6,11 @@
 
 <h1 align="center">Computer Vision, Image Processing & Deep Learning</h1>
 
-Welcome — thank you for taking the time to explore my work. This portfolio is where theory becomes something I can build, test, measure, and explain.
+Hello and welcome to my MSc CORO DASSIP portfolio!
 
-Across eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**, I work through complete technical problems — from the underlying mathematics and assumptions to implementation, diagnostics, quantitative evaluation, and validated results.
+This repository captures how I turn technical concepts into working, testable solutions. Across eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**, each problem starts with the underlying theory, moves into implementation, and finishes with quantitative evaluation, diagnostics, and validation.
 
-The goal throughout the repository is simple: understand each method well enough to use it correctly, question its limits, and make the reasoning behind every technical decision visible.
+What you will find here is not just code, but the reasoning behind it: why a method is chosen, how its assumptions are tested, what the results mean, and where the approach reaches its limits. If you want to see how I think through technical problems from first principles to verified results, the modules below are the best place to start.
 
 ---
 
