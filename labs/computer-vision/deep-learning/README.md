@@ -99,4 +99,12 @@ Not included:
 
 ---
 
-[← Computer Vision labs](../README.md) · [Portfolio home](../../../README.md)
+<p align="center">
+  <a href="../README.md">
+    <img src="../../../assets/nav-computer-vision.svg" height="44" alt="Computer Vision" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="../../../README.md">
+    <img src="../../../assets/nav-portfolio-home.svg" height="44" alt="Portfolio home" />
+  </a>
+</p>

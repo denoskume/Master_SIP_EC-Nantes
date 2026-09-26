@@ -111,4 +111,12 @@ Not included:
 
 ---
 
-[← Image Processing labs](../README.md) · [Portfolio home](../../../README.md)
+<p align="center">
+  <a href="../README.md">
+    <img src="../../../assets/nav-image-processing.svg" height="44" alt="Image Processing" />
+  </a>
+  &nbsp;&nbsp;
+  <a href="../../../README.md">
+    <img src="../../../assets/nav-portfolio-home.svg" height="44" alt="Portfolio home" />
+  </a>
+</p>
