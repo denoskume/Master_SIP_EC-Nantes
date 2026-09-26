@@ -8,7 +8,7 @@
 
 Hello and welcome to my MSc CORO DASSIP portfolio!
 
-This repository brings together eight laboratory modules in **Computer Vision, Image Processing, and Deep Learning**. Each lab starts from a defined experimental objective, establishes the relevant theory and assumptions, implements the required methods, and evaluates the observations through quantitative measures, visual diagnostics, and validation checks.
+This repository brings together laboratory modules in **Computer Vision, Image Processing, and Deep Learning**. Each lab starts from a defined experimental objective, establishes the relevant theory and assumptions, implements the required methods, and evaluates the observations through quantitative measures, visual diagnostics, and validation checks.
 
 The repository follows the same structure across all labs: a **Problem Statement** defines the experiment, **Theory** develops the required concepts and models, **Requirements** specifies the environment and data, and **Implementation** contains the executable workflow, results, analysis, and validation. Source data and generated figures remain separated in dedicated `data/` and `outputs/` directories.
 
