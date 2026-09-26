@@ -6,9 +6,9 @@
 
 <h1 align="center">Computer Vision, Image Processing & Deep Learning</h1>
 
-Eight laboratory modules covering core methods, implementation, quantitative evaluation, and validation.
+Welcome — this repository brings together eight hands-on laboratory modules in **Computer Vision, Image Processing, and Deep Learning**, built to connect mathematical understanding with working implementations.
 
-Each module provides a **problem statement**, **requirements**, **theoretical foundations**, and an **executable implementation** with generated results.
+Each module moves from a clearly defined problem to theory, implementation, quantitative evaluation, and validated results, making the repository both a record of learning and a practical technical reference.
 
 ---
 
