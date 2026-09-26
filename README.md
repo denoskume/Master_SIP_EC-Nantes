@@ -33,7 +33,11 @@ Beyond the code, the notebooks document the experimental reasoning: how methods 
 | [Feature Detection & Tracking](labs/computer-vision/feature-tracking) | ORB, Hamming matching, BFMatcher, RANSAC, homography, object tracking |
 | [Deep Learning](labs/computer-vision/deep-learning) | PyTorch MLP, MNIST classification, BatchNorm, ReLU, Cross-Entropy, Adam, model evaluation |
 
-[Computer Vision →](labs/computer-vision)
+<p align="center">
+  <a href="labs/computer-vision">
+    <img src="https://img.shields.io/badge/Computer_Vision-Open_Module-181717?style=for-the-badge" alt="Computer Vision" />
+  </a>
+</p>
 
 ### Image Processing
 
@@ -45,7 +49,11 @@ Beyond the code, the notebooks document the experimental reasoning: how methods 
 | [Frequency-Domain Filtering](labs/image-processing/filtering-in-frequency-domain) | FFT, spectral analysis, Ideal/Gaussian/Butterworth filters, notch filtering |
 | [Image Segmentation](labs/image-processing/segmentation) | thresholding, morphology, connected components, HSV segmentation, watershed, IoU, Dice |
 
-[Image Processing →](labs/image-processing)
+<p align="center">
+  <a href="labs/image-processing">
+    <img src="https://img.shields.io/badge/Image_Processing-Open_Module-181717?style=for-the-badge" alt="Image Processing" />
+  </a>
+</p>
 
 ---
 
