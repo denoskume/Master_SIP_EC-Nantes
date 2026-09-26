@@ -78,7 +78,7 @@ msc-coro-dassip-portfolio/
 
 ---
 
-## Standalone Projects
+## Other Projects
 
 - [Background Subtraction — Fluoroscopy](https://github.com/denoskume/Background-Subtraction-Fluoroscopy)
 - [CLAP Zero-Shot Audio Classification](https://github.com/denoskume/CLAP-Zero-Shot-Audio-Classification)
@@ -86,13 +86,13 @@ msc-coro-dassip-portfolio/
 
 ---
 
-## Automated QA
+## Repository Checks
 
-The `Notebook QA` workflow runs on pushes to `main` and on pull requests. It validates the expected lab/notebook structure, notebook JSON, Python syntax, repository-relative paths, and the required final-analysis section in each implementation notebook.
+Automatic checks run when changes are pushed to `main` or submitted through a pull request. They verify the notebook structure, JSON validity, Python syntax, relative paths, and the presence of the final analysis section in each `main.ipynb`.
 
 ---
 
-## Technical Stack
+## Tools and Libraries
 
 **Python • NumPy • SciPy • Matplotlib • OpenCV • Pillow • PyTorch • python-mnist • tqdm • Jupyter • VS Code • WSL Ubuntu**
 
