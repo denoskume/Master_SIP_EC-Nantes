@@ -6,7 +6,7 @@
 
 # MSc CORO DASSIP — Portfolio
 
-This repository brings together laboratory modules in Computer Vision, Image Processing, and Deep Learning from my MSc at Centrale Nantes.
+This repository brings together laboratory modules in **Computer Vision, Image Processing, and Deep Learning**.
 
 Each lab begins with a defined experimental objective, develops the relevant theory and assumptions, implements the required methods, and evaluates the results through quantitative measures, visual diagnostics, and validation checks.
 
@@ -20,6 +20,7 @@ All labs follow the same structure:
 Source data and generated figures are kept separate in `data/` and `outputs/`.
 
 Beyond the code, the notebooks document the experimental reasoning: how methods and parameters are selected, how results are interpreted, which assumptions hold, and where limitations appear.
+
 ---
 
 ## Laboratory Work
@@ -45,25 +46,6 @@ Beyond the code, the notebooks document the experimental reasoning: how methods 
 | [Image Segmentation](labs/image-processing/segmentation) | thresholding, morphology, connected components, HSV segmentation, watershed, IoU, Dice |
 
 [Image Processing →](labs/image-processing)
-
----
-
-## Notebook Structure
-
-Each laboratory module contains:
-
-```text
-notebooks/
-├── theory.ipynb
-├── problem_statement.ipynb
-├── requirements.ipynb
-└── main.ipynb
-```
-
-- **Theory** — concepts, formulas, assumptions, limitations, and references.
-- **Problem Statement** — context, objectives, tasks, input data, and deliverables.
-- **Requirements** — Python version, dependencies, required data, and installation instructions.
-- **Implementation** — executable code, outputs, metrics, diagnostics, validation, and final interpretation.
 
 ---
 
@@ -104,30 +86,9 @@ msc-coro-dassip-portfolio/
 
 ---
 
-## Repository Standard
-
-- one `requirements.txt` per laboratory module;
-- repository-relative data and output paths;
-- four notebooks per laboratory module;
-- generated figures under `outputs/figures/`;
-- explicit numerical and output validation in implementation notebooks;
-- final technical interpretation in each `main.ipynb`.
-
----
-
 ## Automated QA
 
-The `Notebook QA` workflow runs on pushes to `main` and on pull requests.
-
-It checks:
-
-- 8 laboratory modules;
-- 32 notebooks;
-- notebook JSON validity;
-- Python syntax in every code cell;
-- absence of machine-specific absolute paths;
-- absence of the deprecated `Zero to Mastery` wording;
-- presence of `Final Analysis & Interpretation` in every implementation notebook.
+The `Notebook QA` workflow runs on pushes to `main` and on pull requests. It validates the expected lab/notebook structure, notebook JSON, Python syntax, repository-relative paths, and the required final-analysis section in each implementation notebook.
 
 ---
 
