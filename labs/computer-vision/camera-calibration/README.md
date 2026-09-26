@@ -19,7 +19,7 @@ The lab is organized into four complementary notebooks:
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 13 required tasks.
 - [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical formulation, derivations, modeling assumptions, failure modes, and limitations.
-- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Implementation](notebooks/main.ipynb) — executable workflow with code, generated outputs, metrics, diagnostics, final analysis, and validation.
 
 ## Outputs
 
@@ -40,11 +40,12 @@ Main outputs:
 
 ## Run
 
-From the module directory:
+From the repository root:
 
 ```bash
-cd ~/msc-coro-dassip-portfolio/labs/computer-vision/camera-calibration
+cd labs/computer-vision/camera-calibration
 
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 code .

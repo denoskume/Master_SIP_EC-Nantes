@@ -41,10 +41,10 @@ Across the modules:
 
 - paths are repository-relative;
 - dependencies are declared in each module's `requirements.txt`;
-- `main.ipynb` executes top-to-bottom;
+- `main.ipynb` is structured for top-to-bottom execution;
 - generated evidence is stored under `outputs/`;
 - numerical results are paired with visual diagnostics;
-- final cells include explicit validation and consistency checks where relevant.
+- implementation notebooks close with explicit validation, consistency checks, and final technical interpretation where relevant.
 
 ## Directory Structure
 

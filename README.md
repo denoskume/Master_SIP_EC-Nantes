@@ -72,6 +72,11 @@ msc-coro-dassip-portfolio/
 │       ├── image-processing-fundamentals/
 │       ├── image-transformation/
 │       └── segmentation/
+├── .github/
+│   └── workflows/
+│       └── notebook-qa.yml
+├── scripts/
+│   └── validate_notebooks.py
 ├── .gitignore
 └── README.md
 ```
@@ -99,9 +104,13 @@ Larger projects are maintained independently so each can be reviewed as a comple
 
 ---
 
+## Automated QA
+
+Every push and pull request runs the repository-level **Notebook QA** workflow. It verifies the expected 8-lab / 32-notebook structure, validates notebook JSON, compiles every Python code cell, rejects machine-specific absolute paths and the deprecated `Zero to Mastery` wording, and confirms that each implementation notebook contains a final analysis section.
+
 ## Technical Stack
 
-**Python • NumPy • SciPy • pandas • Matplotlib • OpenCV • Pillow • scikit-learn • PyTorch • Jupyter • VS Code • WSL Ubuntu**
+**Python • NumPy • SciPy • Matplotlib • OpenCV • Pillow • PyTorch • python-mnist • tqdm • Jupyter • VS Code • WSL Ubuntu**
 
 ---
 

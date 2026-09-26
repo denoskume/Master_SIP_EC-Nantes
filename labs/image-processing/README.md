@@ -43,11 +43,11 @@ Across the modules:
 
 - paths are repository-relative;
 - dependencies are explicit in `requirements.txt`;
-- notebooks execute top-to-bottom in a dedicated environment;
+- notebooks are structured for top-to-bottom execution in a dedicated environment;
 - parameter studies are used where method behavior depends on tuning;
 - generated figures are stored under `outputs/figures/`;
 - quantitative metrics and visual evidence are used together;
-- final outputs are checked explicitly for reproducibility where relevant.
+- final outputs are checked explicitly for reproducibility, followed by a concise technical interpretation where relevant.
 
 ## Directory Structure
 

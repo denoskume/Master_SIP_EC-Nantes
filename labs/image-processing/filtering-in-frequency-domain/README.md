@@ -19,7 +19,7 @@ The lab is organized into four complementary notebooks:
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 26 required tasks.
 - [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — Fourier-domain formulation, transfer functions, spectral diagnostics, periodic interference analysis, and limitations.
-- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Implementation](notebooks/main.ipynb) — executable workflow with code, generated outputs, metrics, diagnostics, final analysis, and validation.
 
 ## Outputs
 
@@ -59,11 +59,12 @@ Main outputs:
 
 ## Run
 
-From the module directory:
+From the repository root:
 
 ```bash
-cd ~/msc-coro-dassip-portfolio/labs/image-processing/filtering-in-frequency-domain
+cd labs/image-processing/filtering-in-frequency-domain
 
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 code .
@@ -71,11 +72,7 @@ code .
 
 Open [main.ipynb](notebooks/main.ipynb), select the project `.venv` kernel, and run all cells from top to bottom.
 
-A successful execution ends with:
-
-```text
-All frequency-domain validation checks passed.
-```
+A successful execution completes the validation checks and integrated workflow without assertion or runtime errors.
 
 ## Lab Structure
 

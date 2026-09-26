@@ -19,7 +19,7 @@ The lab is organized into four complementary notebooks:
 - [Problem Statement](notebooks/problem_statement.ipynb) — problem definition, inputs, expected outputs, and the 23 required tasks.
 - [Requirements](notebooks/requirements.ipynb) — Python environment, required packages, input-data checks, and execution prerequisites.
 - [Theory](notebooks/theory.ipynb) — mathematical and numerical foundations for image representation, statistics, noise models, metrics, and failure analysis.
-- [Implementation](notebooks/main.ipynb) — concise executable workflow with code, generated outputs, metrics, diagnostics, and validation only.
+- [Implementation](notebooks/main.ipynb) — executable workflow with code, generated outputs, metrics, diagnostics, final analysis, and validation.
 
 ## Outputs
 
@@ -50,11 +50,12 @@ Main outputs include:
 
 ## Run
 
-From the module directory:
+From the repository root:
 
 ```bash
-cd ~/msc-coro-dassip-portfolio/labs/image-processing/image-processing-fundamentals
+cd labs/image-processing/image-processing-fundamentals
 
+python -m venv .venv
 source .venv/bin/activate
 python -m pip install -r requirements.txt
 code .
